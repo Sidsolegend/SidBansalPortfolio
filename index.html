@@ -1,19 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Siddharth Bansal — IBDP Year 2 at GIIS Singapore. Building autonomous systems at the intersection of AI, robotics, and hardware. Applying to EECS and Computer Engineering programs.">
+<meta name="author" content="Siddharth Bansal">
+<meta name="theme-color" content="#F0EEE6">
+<link rel="canonical" href="https://sidbansal.me/">
 <meta property="og:title" content="Siddharth Bansal — EECS Portfolio">
 <meta property="og:description" content="Building autonomous systems at the intersection of AI, robotics, and hardware. IBDP Year 2, GIIS Singapore.">
-<meta property="og:url" content="https://sidbansal.me">
+<meta property="og:url" content="https://sidbansal.me/">
 <meta property="og:type" content="website">
-<meta name="twitter:card" content="summary">
+<meta property="og:site_name" content="Siddharth Bansal — EECS Portfolio">
+<meta property="og:image" content="https://sidbansal.me/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Siddharth Bansal — building autonomous systems at the intersection of AI, robotics and hardware">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Siddharth Bansal — EECS Portfolio">
 <meta name="twitter:description" content="Building autonomous systems at the intersection of AI, robotics, and hardware. IBDP Year 2, GIIS Singapore.">
-<meta property="og:image" content="https://sidbansal.me/og-image.png">
-<meta name="twitter:image" content="https://sidbansal.me/og-image.png">
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://sidbansal.me/assets/og-image.png">
 <title>Siddharth Bansal — EECS Portfolio</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23141413'/><text x='50%25' y='50%25' dy='.35em' text-anchor='middle' font-family='-apple-system,sans-serif' font-weight='700' font-size='13' fill='%23C8CDB0'>SB</text></svg>">
 <!-- Anthropic's homepage uses proprietary Styrene (geometric grotesque) + Tiempos (transitional serif). Those are licensed/paid faces; the closest FREE stand-ins used here are "General Sans" (Fontshare) for display/nav and "Newsreader" (Google Fonts) for the serif body/editorial text. -->
@@ -51,7 +57,7 @@
     .site-nav.scrolled .wm-long { max-width:0; opacity:0; }
     .site-nav.scrolled .wm-short { width:1.7em; opacity:1; }
     .nav-links { display:flex; gap:30px; align-items:center; }
-    .nav-links a[data-section] { font-size:13.5px; font-weight:500; color:#6B6A63; text-decoration:none; letter-spacing:-0.01em; transition:color 0.2s; }
+    .nav-links a[data-section] { font-size:13.5px; font-weight:500; color:#5F5E57; text-decoration:none; letter-spacing:-0.01em; transition:color 0.2s; }
     .nav-links a[data-section]:hover { color:#141413; }
     .nav-resume { font-size:13.5px; font-weight:600; color:#F0EEE6; text-decoration:none; background:#141413; padding:9px 18px; border-radius:10px; letter-spacing:-0.01em; transition:background 0.2s; }
     .nav-resume:hover { background:#000000; }
@@ -72,7 +78,7 @@
     /* Hero — editorial, left-aligned */
     .hero { padding: clamp(150px,20vh,220px) 40px clamp(90px,12vw,150px); background:#F0EEE6; }
     .hero-wrap { max-width:1120px; margin:0 auto; }
-    .hero-eyebrow { font-size:13px; font-weight:600; color:#6E7355; letter-spacing:0.18em; text-transform:uppercase; margin-bottom:34px; }
+    .hero-eyebrow { font-size:13px; font-weight:600; color:#5C6145; letter-spacing:0.18em; text-transform:uppercase; margin-bottom:34px; }
     .hero-grid { display:grid; grid-template-columns:1.4fr 1fr; gap:clamp(36px,5vw,80px); align-items:end; }
     .hero-title { font-size:clamp(2.5rem,5.6vw,5rem); font-weight:700; letter-spacing:-0.04em; line-height:1.02; color:#141413; }
     .hero-title .hl { color:#141413; text-decoration:underline; text-decoration-thickness:2px; text-underline-offset:5px; text-decoration-color:rgba(20,20,19,0.32); transition:text-decoration-color 0.2s; }
@@ -82,8 +88,8 @@
     .btn-primary { display:inline-block; font-size:15px; font-weight:600; color:#F0EEE6; text-decoration:none; background:#141413; padding:14px 30px; border-radius:12px; letter-spacing:-0.01em; transition:background 0.2s, transform 0.2s; }
     .btn-primary:hover { background:#000000; transform:translateY(-1px); }
     .hero-links { display:flex; flex-wrap:wrap; gap:22px; align-items:center; }
-    .tlink { font-size:14.5px; font-weight:500; color:#6B6A63; text-decoration:none; transition:color 0.2s; }
-    .tlink:hover { color:#141413; text-decoration:underline; text-decoration-color:#6E7355; text-underline-offset:3px; }
+    .tlink { font-size:14.5px; font-weight:500; color:#5F5E57; text-decoration:none; transition:color 0.2s; }
+    .tlink:hover { color:#141413; text-decoration:underline; text-decoration-color:#5C6145; text-underline-offset:3px; }
 
     /* Active nav link */
     nav a.nav-active { color: #141413 !important; font-weight: 600; }
@@ -98,15 +104,15 @@
     .cert-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:24px; padding-top:24px; border-top:1px solid #E2DFD5; }
 
     /* Other projects group headers */
-    .proj-group-label { font-size: 11px; font-weight: 700; color: #6B6A63; text-transform: uppercase; letter-spacing: 1.2px; padding: 14px 28px 8px; background: #E7E3D9; border-bottom: 1px solid #E2DFD5; }
+    .proj-group-label { font-size: 11px; font-weight: 700; color: #5F5E57; text-transform: uppercase; letter-spacing: 1.2px; padding: 14px 28px 8px; background: #E7E3D9; border-bottom: 1px solid #E2DFD5; }
     .proj-group-label:not(:first-child) { border-top: 1px solid #E2DFD5; }
 
     /* Section header eyebrow (label) */
-    .sec-label { font-size:12px; font-weight:600; color:#6E7355; text-transform:uppercase; letter-spacing:1.6px; margin-bottom:12px; }
+    .sec-label { font-size:12px; font-weight:600; color:#5C6145; text-transform:uppercase; letter-spacing:1.6px; margin-bottom:12px; }
 
     /* Decorative filter tabs */
     .filter-tabs { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:34px; }
-    .ftab { font-family:'General Sans','Inter',system-ui,sans-serif; font-size:11.5px; font-weight:600; letter-spacing:0.09em; text-transform:uppercase; color:#6B6A63; background:transparent; border:1px solid #E2DFD5; padding:9px 18px; border-radius:980px; cursor:pointer; transition:color 0.2s, background 0.2s, border-color 0.2s; }
+    .ftab { font-family:'General Sans','Inter',system-ui,sans-serif; font-size:11.5px; font-weight:600; letter-spacing:0.09em; text-transform:uppercase; color:#5F5E57; background:transparent; border:1px solid #E2DFD5; padding:9px 18px; border-radius:980px; cursor:pointer; transition:color 0.2s, background 0.2s, border-color 0.2s; }
     .ftab:hover { color:#141413; border-color:#141413; }
     .ftab.is-active { background:#141413; color:#F0EEE6; border-color:#141413; }
 
@@ -129,7 +135,7 @@
     .gtile:hover .gtile-sub, .gtile:focus-visible .gtile-sub { max-height:48px; opacity:1; }
     /* LYNX — sage text tile (no photo, unbuilt) */
     .gtile-text { background:#C8CDB0; padding:26px; min-height:240px; display:flex; flex-direction:column; }
-    .gtile-text .gt-eyebrow { font-size:10px; font-weight:600; text-transform:uppercase; letter-spacing:1.8px; color:#6E7355; }
+    .gtile-text .gt-eyebrow { font-size:10px; font-weight:600; text-transform:uppercase; letter-spacing:1.8px; color:#43483A; }
     .gtile-text .gt-name { font-family:'General Sans','Inter',system-ui,sans-serif; font-size:28px; font-weight:700; letter-spacing:-0.03em; color:#141413; margin-top:auto; line-height:1; }
     .gtile-text .gt-sub { font-size:12.5px; color:#43483a; margin-top:8px; line-height:1.5; }
 
@@ -137,10 +143,10 @@
     .award-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:2px; background:#E2DFD5; border:1px solid #E2DFD5; border-radius:22px; overflow:hidden; }
     .award-cell { background:#F0EEE6; padding:34px 34px 38px; display:flex; flex-direction:column; transition:background 0.25s ease; }
     .award-cell:hover { background:#EFEDE3; }
-    .award-label { font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:1.4px; color:#6E7355; }
+    .award-label { font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:1.4px; color:#5C6145; }
     .award-title { font-family:'General Sans','Inter',system-ui,sans-serif; font-size:21px; font-weight:600; letter-spacing:-0.025em; color:#141413; margin-top:12px; line-height:1.15; }
     .award-result { font-size:14px; font-weight:600; color:#141413; margin-top:8px; }
-    .award-desc { font-size:14px; color:#6B6A63; margin-top:10px; line-height:1.6; }
+    .award-desc { font-size:14px; color:#5F5E57; margin-top:10px; line-height:1.6; }
     .award-list { margin-top:24px; display:grid; grid-template-columns:repeat(3,1fr); gap:2px; background:#E2DFD5; border:1px solid #E2DFD5; border-radius:22px; overflow:hidden; }
     .award-item { background:#F0EEE6; padding:26px 26px 28px; transition:background 0.25s ease; }
     .award-item:hover { background:#EFEDE3; }
@@ -161,6 +167,7 @@
       .nav-inner { padding: 0 20px !important; }
       .nav-links { gap: 0 !important; }
       .nav-links a[data-section] { display: none; }
+      #menu-btn { display: inline-block; }
       .hero { padding-left: 24px !important; padding-right: 24px !important; }
       .hero-grid { grid-template-columns: 1fr; gap: 28px; align-items: start; }
       section { padding-top: 76px !important; padding-bottom: 76px !important; padding-left: 24px !important; padding-right: 24px !important; }
@@ -177,19 +184,76 @@
       #modal-specs { grid-template-columns: 1fr !important; }
     }
 
+    /* ── Optimise pass: a11y, mobile nav, case-study links ── */
+    .skip-link { position:absolute; left:-9999px; top:0; z-index:1000; background:#141413; color:#F0EEE6; padding:12px 22px; border-radius:0 0 12px 0; font-size:14px; font-weight:600; text-decoration:none; }
+    .skip-link:focus { left:0; }
+    .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; border:0; }
+    a:focus-visible, button:focus-visible, [role="button"]:focus-visible { outline:2px solid #141413; outline-offset:3px; }
+    #contact a:focus-visible, footer a:focus-visible, #modal-close:focus-visible { outline-color:#F0EEE6; }
+    .gtile.is-hidden { display:none; }
+    #menu-btn { display:none; background:none; border:1px solid #E2DFD5; border-radius:10px; padding:8px 14px; cursor:pointer; font-size:13.5px; font-weight:600; color:#141413; font-family:inherit; }
+    #mobile-menu { display:none; position:fixed; top:64px; left:0; right:0; z-index:99; background:rgba(240,238,230,0.97); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); border-bottom:1px solid #E2DFD5; padding:10px 24px 18px; }
+    #mobile-menu.open { display:block; }
+    #mobile-menu a { display:block; padding:12px 4px; font-size:16px; font-weight:500; color:#141413; text-decoration:none; border-bottom:1px solid #E2DFD5; }
+    #mobile-menu a:last-child { border-bottom:none; }
+    .case-links { margin-top:26px; font-size:14.5px; color:#5F5E57; }
+    .case-links a { color:#141413; font-weight:600; text-decoration:underline; text-decoration-color:rgba(20,20,19,0.35); text-underline-offset:3px; }
+    .case-links a:hover { text-decoration-color:#141413; }
+
     /* Reduced motion */
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
       .aos { opacity: 1 !important; transform: none !important; }
     }
   </style>
+<noscript><style>.aos{opacity:1 !important;transform:none !important}</style></noscript>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://sidbansal.me/#person",
+      "name": "Siddharth Bansal",
+      "url": "https://sidbansal.me/",
+      "email": "mailto:sidb0901@gmail.com",
+      "affiliation": { "@type": "EducationalOrganization", "name": "Global Indian International School, Singapore" },
+      "knowsAbout": ["Robotics", "Embedded Systems", "Machine Learning", "Computer Vision"],
+      "sameAs": ["https://github.com/Sidsolegend", "https://www.linkedin.com/in/siddharth0901bansal/"]
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "LYRA",
+      "url": "https://sidbansal.me/projects/lyra.html",
+      "description": "Wrist-worn gesture wearable: ESP32-C3 + MPU-6050 with an on-device two-stage classifier (rules + decision tree over 9 IMU features), BLE-HID media control, a Flutter calibration app and a LEGO EV3 robot-arm bridge. 79% cross-user accuracy (leave-one-subject-out), 99% on flick, 10% false-positive rate on a 419-sample, 4-subject dataset.",
+      "creator": { "@id": "https://sidbansal.me/#person" }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "CANIS",
+      "url": "https://sidbansal.me/projects/canis.html",
+      "description": "Welfare-first behaviour robot for a fearful dog: Raspberry Pi 5 ArUco vision, an ESP32 arousal state machine with hysteresis and graded exposure levels, a ~1-second motion-watchdog fail-safe, and an Arduino treat dispenser. Rewards the dog for leaving a zone — never punishes.",
+      "creator": { "@id": "https://sidbansal.me/#person" }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "LYNX",
+      "url": "https://sidbansal.me/projects/lynx.html",
+      "description": "SpotMicro-class 12-DOF quadruped (in progress, team of six) based on Rune Harlyk's open-source SpotMicroESP32-Leika. Original work: a Raspberry Pi 5 to ESP32 UART bridge, a person-following vision state machine, and a 0.65x downsizing analysis with scaled STLs, torque math and an under-S$100 BOM.",
+      "isBasedOn": "https://github.com/runeharlyk/SpotMicroESP32-Leika",
+      "creator": { "@id": "https://sidbansal.me/#person" }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
-<div id="scroll-progress"></div>
+<a class="skip-link" href="#main">Skip to content</a>
+<div id="scroll-progress" aria-hidden="true"></div>
 
 <!-- ═══ NAV ═══ -->
-<nav class="site-nav">
+<nav class="site-nav" aria-label="Primary">
   <div class="nav-inner">
     <a href="#top" class="wordmark" aria-label="Siddharth Bansal">
       <span class="wm-long">Siddharth Bansal</span><span class="wm-short" aria-hidden="true">SB</span>
@@ -200,10 +264,20 @@
       <a href="#internships" data-section="internships">Experience</a>
       <a href="#awards" data-section="awards">Awards</a>
       <a href="#contact" data-section="contact">Contact</a>
-      <a href="#" class="nav-resume">Resume ↓</a>
+      <a href="mailto:sidb0901@gmail.com?subject=Resume%20request" class="nav-resume">Request Resume</a>
+      <button id="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu">Menu</button>
     </div>
   </div>
+  <div id="mobile-menu">
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+    <a href="#internships">Experience</a>
+    <a href="#awards">Awards</a>
+    <a href="#contact">Contact</a>
+  </div>
 </nav>
+
+<main id="main">
 
 <!-- ═══ HERO ═══ -->
 <section id="top" class="hero">
@@ -212,13 +286,13 @@
     <div class="hero-grid">
       <h1 class="hero-title" style="animation:slideUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.08s both;">Building autonomous systems at the intersection of AI, <a href="#projects" class="hl">robotics</a> &amp; <a href="#projects" class="hl">hardware</a>.</h1>
       <div class="hero-side" style="animation:slideUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.2s both;">
-        <p class="serif hero-lede">I'm Siddharth Bansal, an IBDP Year 2 student at GIIS Singapore. I build robots, wearables, and AI systems end to end — from a 12-DOF autonomous quadruped to a production opportunity platform used across three schools.</p>
+        <p class="serif hero-lede">I'm Siddharth Bansal, an IBDP Year 2 student at GIIS Singapore. I build robots, wearables, and AI systems end to end — from a wrist-worn gesture interface to a production opportunity platform used across three schools.</p>
         <div class="hero-cta">
           <a href="#projects" class="btn-primary">View Projects</a>
           <div class="hero-links">
-            <a href="#" class="tlink">Resume</a>
-            <a href="https://github.com/Sidsolegend" target="_blank" class="tlink">GitHub</a>
-            <a href="https://www.linkedin.com/in/siddharth0901bansal/" target="_blank" class="tlink">LinkedIn</a>
+            <a href="mailto:sidb0901@gmail.com?subject=Resume%20request" class="tlink">Resume</a>
+            <a href="https://github.com/Sidsolegend" target="_blank" rel="noopener noreferrer" class="tlink">GitHub</a>
+            <a href="https://www.linkedin.com/in/siddharth0901bansal/" target="_blank" rel="noopener noreferrer" class="tlink">LinkedIn</a>
             <a href="#contact" class="tlink">Get in Touch</a>
           </div>
         </div>
@@ -230,8 +304,9 @@
 <!-- ═══ BIO ═══ -->
 <section style="padding:clamp(64px,9vw,120px) 32px; background:#F0EEE6;">
     <div style="max-width:1120px; margin:0 auto;">
+      <h2 class="sr-only">About</h2>
       <div id="bio-card" style="background:#C8CDB0; border-radius:40px; padding:clamp(40px,6vw,72px); transform-origin:center top; will-change:transform, border-radius;">
-        <p class="serif" style="max-width:820px; font-size:clamp(1.2rem, 2.4vw, 1.65rem); color:#141413; line-height:1.5; font-weight:400; letter-spacing:-0.01em; text-wrap:pretty;">I started building with Lego at 6 and ended up building a 12-legged robot — less about choosing projects and more about gradually pushing what I could make. Now in Year 2 of the IB Diploma at GIIS Singapore, 40/42 in Year 1, applying to EECS and Computer Engineering programs across the US, UK, Singapore, and Europe.</p>
+        <p class="serif" style="max-width:820px; font-size:clamp(1.2rem, 2.4vw, 1.65rem); color:#141413; line-height:1.5; font-weight:400; letter-spacing:-0.01em; text-wrap:pretty;">I started building with Lego at 6 and now lead a six-person team building a 12-DOF quadruped robot — less about choosing projects and more about gradually pushing what I could make. Now in Year 2 of the IB Diploma at GIIS Singapore, 40/42 in Year 1, applying to EECS and Computer Engineering programs across the US, UK, Singapore, and Europe.</p>
       </div>
     </div>
   </section>
@@ -240,7 +315,7 @@
 <section id="education" style="padding:clamp(96px,12vw,176px) 32px; background:#E7E3D9;">
   <div style="max-width:1120px; margin:0 auto;">
     <div style="text-align:left; margin-bottom:52px;">
-      <p style="font-size:12px; font-weight:600; color:#6E7355; text-transform:uppercase; letter-spacing:1.5px; margin-bottom:12px;">Academic Record</p>
+      <p style="font-size:12px; font-weight:600; color:#5C6145; text-transform:uppercase; letter-spacing:1.5px; margin-bottom:12px;">Academic Record</p>
       <h2 style="font-size:clamp(2rem, 4.5vw, 3rem); font-weight:700; letter-spacing:-0.02em; color:#141413;">Education</h2>
     </div>
 
@@ -248,21 +323,21 @@
     <div class="aos" style="background:#F0EEE6; border:1px solid #E2DFD5; border-radius:24px; padding:40px 44px; margin-bottom:16px;">
       <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:12px;">
         <div>
-          <span style="font-size:12px; font-weight:600; color:#6E7355; text-transform:uppercase; letter-spacing:1.2px;">Currently Enrolled</span>
+          <span style="font-size:12px; font-weight:600; color:#5C6145; text-transform:uppercase; letter-spacing:1.2px;">Currently Enrolled</span>
           <h3 style="font-size:24px; font-weight:700; color:#141413; letter-spacing:-0.8px; margin-top:8px;">IB Diploma Programme (IBDP)</h3>
-          <p style="font-size:15px; color:#6B6A63; margin-top:4px;">Global Indian International School · Singapore</p>
+          <p style="font-size:15px; color:#5F5E57; margin-top:4px;">Global Indian International School · Singapore</p>
         </div>
         <div style="text-align:right;">
-          <span style="font-size:13px; font-weight:600; color:#6B6A63;">2025 – 2027</span>
+          <span style="font-size:13px; font-weight:600; color:#5F5E57;">2025 – 2027</span>
           <div style="margin-top:8px;">
             <span style="font-size:15px; font-weight:700; color:#141413;">40 / 42</span>
-            <span style="font-size:13px; color:#6B6A63; margin-left:6px;">Year 1 Score</span>
+            <span style="font-size:13px; color:#5F5E57; margin-left:6px;">Year 1 Score</span>
           </div>
         </div>
       </div>
       <div class="subj-grid">
         <div>
-          <p style="font-size:11px; font-weight:600; color:#6B6A63; text-transform:uppercase; letter-spacing:1px; margin-bottom:10px;">HL Subjects</p>
+          <p style="font-size:11px; font-weight:600; color:#5F5E57; text-transform:uppercase; letter-spacing:1px; margin-bottom:10px;">HL Subjects</p>
           <div style="display:flex; flex-direction:column; gap:6px;">
             <div style="display:flex; justify-content:space-between; align-items:center;">
               <span style="font-size:14px; color:#141413;">Mathematics AA</span>
@@ -279,7 +354,7 @@
           </div>
         </div>
         <div>
-          <p style="font-size:11px; font-weight:600; color:#6B6A63; text-transform:uppercase; letter-spacing:1px; margin-bottom:10px;">SL Subjects</p>
+          <p style="font-size:11px; font-weight:600; color:#5F5E57; text-transform:uppercase; letter-spacing:1px; margin-bottom:10px;">SL Subjects</p>
           <div style="display:flex; flex-direction:column; gap:6px;">
             <div style="display:flex; justify-content:space-between; align-items:center;">
               <span style="font-size:14px; color:#141413;">Business Management</span>
@@ -298,32 +373,32 @@
       </div>
       <div class="cert-grid">
         <div>
-          <span style="font-size:11px; font-weight:600; color:#6B6A63; text-transform:uppercase; letter-spacing:1px;">SAT</span>
-          <p style="font-size:15px; font-weight:600; color:#141413; margin-top:3px;">1520 <span style="font-weight:400; font-size:13px; color:#6B6A63;">· M 780 · E 720</span></p>
+          <span style="font-size:11px; font-weight:600; color:#5F5E57; text-transform:uppercase; letter-spacing:1px;">SAT</span>
+          <p style="font-size:15px; font-weight:600; color:#141413; margin-top:3px;">1520 <span style="font-weight:400; font-size:13px; color:#5F5E57;">· M 780 · E 720</span></p>
         </div>
         <div>
-          <span style="font-size:11px; font-weight:600; color:#6B6A63; text-transform:uppercase; letter-spacing:1px;">AP Biology</span>
-          <p style="font-size:15px; font-weight:600; color:#141413; margin-top:3px;">4 / 5 <span style="font-weight:400; font-size:13px; color:#6B6A63;">· 2026</span></p>
+          <span style="font-size:11px; font-weight:600; color:#5F5E57; text-transform:uppercase; letter-spacing:1px;">AP Biology</span>
+          <p style="font-size:15px; font-weight:600; color:#141413; margin-top:3px;">4 / 5 <span style="font-weight:400; font-size:13px; color:#5F5E57;">· 2026</span></p>
         </div>
         <div>
-          <span style="font-size:11px; font-weight:600; color:#6B6A63; text-transform:uppercase; letter-spacing:1px;">Harvard CS50</span>
-          <p style="font-size:15px; font-weight:600; color:#141413; margin-top:3px;">In Progress <span style="font-weight:400; font-size:13px; color:#6B6A63;">· 2026</span></p>
+          <span style="font-size:11px; font-weight:600; color:#5F5E57; text-transform:uppercase; letter-spacing:1px;">Harvard CS50</span>
+          <p style="font-size:15px; font-weight:600; color:#141413; margin-top:3px;">In Progress <span style="font-weight:400; font-size:13px; color:#5F5E57;">· 2026</span></p>
         </div>
         <div>
-          <span style="font-size:11px; font-weight:600; color:#6B6A63; text-transform:uppercase; letter-spacing:1px;">IIT Madras – Bioengineering</span>
-          <p style="font-size:15px; font-weight:600; color:#141413; margin-top:3px;">100 / 100 <span style="font-weight:400; font-size:13px; color:#6B6A63;">· Final Exam</span></p>
+          <span style="font-size:11px; font-weight:600; color:#5F5E57; text-transform:uppercase; letter-spacing:1px;">IIT Madras – Bioengineering</span>
+          <p style="font-size:15px; font-weight:600; color:#141413; margin-top:3px;">100 / 100 <span style="font-weight:400; font-size:13px; color:#5F5E57;">· Final Exam</span></p>
         </div>
         <div>
-          <span style="font-size:11px; font-weight:600; color:#6B6A63; text-transform:uppercase; letter-spacing:1px;">IIT Madras – Math Unplugged</span>
-          <p style="font-size:15px; font-weight:600; color:#141413; margin-top:3px;">92 / 100 <span style="font-weight:400; font-size:13px; color:#6B6A63;">· Final Exam</span></p>
+          <span style="font-size:11px; font-weight:600; color:#5F5E57; text-transform:uppercase; letter-spacing:1px;">IIT Madras – Math Unplugged</span>
+          <p style="font-size:15px; font-weight:600; color:#141413; margin-top:3px;">92 / 100 <span style="font-weight:400; font-size:13px; color:#5F5E57;">· Final Exam</span></p>
         </div>
         <div>
-          <span style="font-size:11px; font-weight:600; color:#6B6A63; text-transform:uppercase; letter-spacing:1px;">DELF French</span>
-          <p style="font-size:15px; font-weight:600; color:#141413; margin-top:3px;">A1 & A2 <span style="font-weight:400; font-size:13px; color:#6B6A63;">· Certified</span></p>
+          <span style="font-size:11px; font-weight:600; color:#5F5E57; text-transform:uppercase; letter-spacing:1px;">DELF French</span>
+          <p style="font-size:15px; font-weight:600; color:#141413; margin-top:3px;">A1 & A2 <span style="font-weight:400; font-size:13px; color:#5F5E57;">· Certified</span></p>
         </div>
         <div>
-          <span style="font-size:11px; font-weight:600; color:#6B6A63; text-transform:uppercase; letter-spacing:1px;">freeCodeCamp</span>
-          <p style="font-size:15px; font-weight:600; color:#141413; margin-top:3px;">HTML & CSS <span style="font-weight:400; font-size:13px; color:#6B6A63;">· Certified</span></p>
+          <span style="font-size:11px; font-weight:600; color:#5F5E57; text-transform:uppercase; letter-spacing:1px;">freeCodeCamp</span>
+          <p style="font-size:15px; font-weight:600; color:#141413; margin-top:3px;">HTML & CSS <span style="font-weight:400; font-size:13px; color:#5F5E57;">· Certified</span></p>
         </div>
       </div>
     </div>
@@ -333,18 +408,18 @@
       <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:12px;">
         <div>
           <h3 style="font-size:24px; font-weight:700; color:#141413; letter-spacing:-0.8px;">IGCSE</h3>
-          <p style="font-size:15px; color:#6B6A63; margin-top:4px;">Global Indian International School · Singapore</p>
+          <p style="font-size:15px; color:#5F5E57; margin-top:4px;">Global Indian International School · Singapore</p>
         </div>
-        <span style="font-size:13px; font-weight:600; color:#6B6A63;">2024 – 2025</span>
+        <span style="font-size:13px; font-weight:600; color:#5F5E57;">2024 – 2025</span>
       </div>
       <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:20px;">
         <span style="font-size:13px; font-weight:600; color:#141413; background:#E7E3D9; padding:6px 16px; border-radius:980px;">8 A* subjects</span>
         <span style="font-size:13px; font-weight:600; color:#141413; background:#E7E3D9; padding:6px 16px; border-radius:980px;">ICE Distinction (Cambridge)</span>
-        <span style="font-size:13px; font-weight:500; color:#6B6A63; background:#E7E3D9; padding:6px 16px; border-radius:980px;">8 Subject Proficiency Awards</span>
-        <span style="font-size:13px; font-weight:500; color:#6B6A63; background:#E7E3D9; padding:6px 16px; border-radius:980px;">APJ Abdul Kalam Award – 2nd Prize</span>
-        <span style="font-size:13px; font-weight:500; color:#6B6A63; background:#E7E3D9; padding:6px 16px; border-radius:980px;">Global Future Ready Merit Scholarship</span>
+        <span style="font-size:13px; font-weight:500; color:#5F5E57; background:#E7E3D9; padding:6px 16px; border-radius:980px;">8 Subject Proficiency Awards</span>
+        <span style="font-size:13px; font-weight:500; color:#5F5E57; background:#E7E3D9; padding:6px 16px; border-radius:980px;">APJ Abdul Kalam Award – 2nd Prize</span>
+        <span style="font-size:13px; font-weight:500; color:#5F5E57; background:#E7E3D9; padding:6px 16px; border-radius:980px;">Global Future Ready Merit Scholarship</span>
       </div>
-      <p style="font-size:13px; color:#6B6A63; margin-top:14px;">Extended Maths · Additional Maths · Computer Science · Physics · Chemistry · Biology · French · FLE · English Literature</p>
+      <p style="font-size:13px; color:#5F5E57; margin-top:14px;">Extended Maths · Additional Maths · Computer Science · Physics · Chemistry · Biology · French · FLE · English Literature</p>
     </div>
   </div>
 </section>
@@ -353,7 +428,7 @@
 <section id="internships" style="padding:clamp(96px,12vw,176px) 32px; background:#F0EEE6;">
   <div style="max-width:1120px; margin:0 auto;">
     <div style="text-align:left; margin-bottom:52px;">
-      <p style="font-size:12px; font-weight:600; color:#6E7355; text-transform:uppercase; letter-spacing:1.5px; margin-bottom:12px;">Industry Experience</p>
+      <p style="font-size:12px; font-weight:600; color:#5C6145; text-transform:uppercase; letter-spacing:1.5px; margin-bottom:12px;">Industry Experience</p>
       <h2 style="font-size:clamp(2rem, 4.5vw, 3rem); font-weight:700; letter-spacing:-0.02em; color:#141413;">Internships</h2>
     </div>
 
@@ -362,22 +437,22 @@
         <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:10px;">
           <div>
             <h3 style="font-size:19px; font-weight:600; color:#141413; letter-spacing:-0.3px;">KPIT Technologies</h3>
-            <p style="font-size:14px; color:#6B6A63; margin-top:3px;">Intern – AI & Digital Solutions</p>
+            <p style="font-size:14px; color:#5F5E57; margin-top:3px;">Intern – AI & Digital Solutions</p>
           </div>
-          <span style="font-size:12px; font-weight:500; color:#6B6A63; white-space:nowrap;">8 Jun – 20 Jul 2026</span>
+          <span style="font-size:12px; font-weight:500; color:#5F5E57; white-space:nowrap;">8 Jun – 20 Jul 2026</span>
         </div>
-        <p style="font-size:14px; color:#6B6A63; margin-top:14px; line-height:1.65;">6-week internship focused on artificial intelligence and digital transformation solutions. Gained hands-on exposure to enterprise-grade AI implementation and software development practices.</p>
+        <p style="font-size:14px; color:#5F5E57; margin-top:14px; line-height:1.65;">6-week internship focused on artificial intelligence and digital transformation solutions. Gained hands-on exposure to enterprise-grade AI implementation and software development practices.</p>
       </div>
 
       <div class="aos" style="background:#E7E3D9; border-radius:20px; padding:32px 36px;">
         <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:10px;">
           <div>
             <h3 style="font-size:19px; font-weight:600; color:#141413; letter-spacing:-0.3px;">Bonji Naturals</h3>
-            <p style="font-size:14px; color:#6B6A63; margin-top:3px;">Mentored Intern – BuildUp Internship Program</p>
+            <p style="font-size:14px; color:#5F5E57; margin-top:3px;">Mentored Intern – BuildUp Internship Program</p>
           </div>
-          <span style="font-size:12px; font-weight:500; color:#6B6A63; white-space:nowrap;">Jun – Aug 2026</span>
+          <span style="font-size:12px; font-weight:500; color:#5F5E57; white-space:nowrap;">Jun – Aug 2026</span>
         </div>
-        <p style="font-size:14px; color:#6B6A63; margin-top:14px; line-height:1.65;">Selected for the competitive BuildUp Mentored Internship Program (Summer 2026). Applying AI and data analytics skills to real-world product and business challenges within the start-up ecosystem.</p>
+        <p style="font-size:14px; color:#5F5E57; margin-top:14px; line-height:1.65;">Selected for the competitive BuildUp Mentored Internship Program (Summer 2026). Applying AI and data analytics skills to real-world product and business challenges within the start-up ecosystem.</p>
       </div>
     </div>
   </div>
@@ -391,47 +466,42 @@
       <h2 style="font-size:clamp(2.2rem, 5vw, 3.4rem); font-weight:700; letter-spacing:-0.03em; color:#141413;">Projects</h2>
     </div>
 
-    <!-- Decorative filter tabs (static — visual grouping, not wired to filtering) -->
-    <div class="filter-tabs" role="tablist" aria-label="Project categories">
-      <button class="ftab is-active" type="button">All</button>
-      <button class="ftab" type="button">Robotics</button>
-      <button class="ftab" type="button">ML</button>
-      <button class="ftab" type="button">Hardware</button>
+    <!-- Filter tabs — wired to gallery filtering via data-filter / data-cat -->
+    <div class="filter-tabs" role="group" aria-label="Filter projects by category">
+      <button class="ftab is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+      <button class="ftab" type="button" data-filter="robotics" aria-pressed="false">Robotics</button>
+      <button class="ftab" type="button" data-filter="ml" aria-pressed="false">ML</button>
+      <button class="ftab" type="button" data-filter="hardware" aria-pressed="false">Hardware</button>
     </div>
 
     <!-- ── IMAGE-FORWARD GALLERY (masonry) ──
-         Placeholder tiles for now (sage / greige panels). Real photos drop in later:
-         each tile has a "SWAP" comment marking exactly where the <img loading="lazy"> goes.
-         Every tile stays clickable → opens the matching project modal (openModal key). -->
+         Optimized WebP photos (resized, EXIF-rotated). Every tile opens the matching
+         project modal (openModal key); each modal links to a full case-study page. -->
     <div class="gallery aos">
 
       <!-- LYNX — unbuilt quadruped: stays a sage text tile (no photo) -->
-      <div class="gtile gtile-text proj-card-clickable" onclick="openModal('lynx')" tabindex="0" role="button" aria-label="Open LYNX project" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal('lynx')}">
+      <div class="gtile gtile-text proj-card-clickable" data-cat="robotics hardware" onclick="openModal('lynx')" tabindex="0" role="button" aria-label="Open LYNX project details" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal('lynx')}">
         <span class="gt-eyebrow">Robotics · In Progress</span>
         <h3 class="gt-name">LYNX</h3>
-        <p class="gt-sub">12-DOF autonomous quadruped · SpotMicro ESP32 + RPi 5 · competing NRC Singapore, Aug 2026.</p>
+        <p class="gt-sub">12-DOF quadruped · team of 6 · based on Rune Harlyk's open-source SpotMicroESP32-Leika · build starts Jul 2026 · NRC Singapore, Aug 2026.</p>
       </div>
 
       <!-- LYRA (primary) -->
-      <div class="gtile gtile-greige proj-card-clickable" onclick="openModal('lyra')" tabindex="0" role="button" aria-label="Open LYRA project" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal('lyra')}">
+      <div class="gtile gtile-greige proj-card-clickable" data-cat="hardware ml" onclick="openModal('lyra')" tabindex="0" role="button" aria-label="Open LYRA project details" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal('lyra')}">
         <div class="gtile-media" style="aspect-ratio:4/5;">
-          <!-- SWAP: assets/projects/lyra.jpeg — replace this placeholder <span> with:
-               <img src="assets/projects/lyra.jpeg" alt="LYRA wearable gesture module" loading="lazy"> -->
-          <span class="ph-mark">Photo</span>
+          <img src="assets/projects/lyra.webp" alt="Early LYRA prototype worn on the wrist — an ESP32 board and MPU-6050 IMU wired on a breadboard" width="900" height="1200" loading="lazy" decoding="async">
         </div>
         <div class="gtile-cap">
           <p class="gtile-eyebrow">Wearable · HCI</p>
           <h3 class="gtile-name">LYRA</h3>
-          <p class="gtile-sub">Gesture-based IMU wearable · BLE · CNN inference</p>
+          <p class="gtile-sub">Gesture wearable · on-device 2-stage classifier · BLE-HID</p>
         </div>
       </div>
 
       <!-- FIRE -->
-      <div class="gtile gtile-sage proj-card-clickable" onclick="openModal('fire')" tabindex="0" role="button" aria-label="Open FIRE project" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal('fire')}">
-        <div class="gtile-media" style="aspect-ratio:3/4;">
-          <!-- SWAP: assets/projects/fire.jpg — replace this placeholder <span> with:
-               <img src="assets/projects/fire.jpg" alt="FIRE opportunity platform" loading="lazy"> -->
-          <span class="ph-mark">Photo</span>
+      <div class="gtile gtile-sage proj-card-clickable" data-cat="ml" onclick="openModal('fire')" tabindex="0" role="button" aria-label="Open FIRE project details" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal('fire')}">
+        <div class="gtile-media" style="aspect-ratio:16/10;">
+          <img src="assets/projects/fire.webp" alt="The FIRE team — seven students in formal wear standing together on campus" width="1600" height="778" loading="lazy" decoding="async">
         </div>
         <div class="gtile-cap">
           <p class="gtile-eyebrow">EdTech · Live · 200+ students</p>
@@ -441,39 +511,33 @@
       </div>
 
       <!-- CANIS (primary) -->
-      <div class="gtile gtile-greige proj-card-clickable" onclick="openModal('canis')" tabindex="0" role="button" aria-label="Open CANIS project" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal('canis')}">
+      <div class="gtile gtile-greige proj-card-clickable" data-cat="robotics ml" onclick="openModal('canis')" tabindex="0" role="button" aria-label="Open CANIS project details" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal('canis')}">
         <div class="gtile-media" style="aspect-ratio:1/1;">
-          <!-- SWAP: assets/projects/canis.jpeg — replace this placeholder <span> with:
-               <img src="assets/projects/canis.jpeg" alt="CANIS behavioral robotics" loading="lazy"> -->
-          <span class="ph-mark">Photo</span>
+          <img src="assets/projects/canis.webp" alt="CANIS chassis prototype — a Raspberry Pi 5 in a black case mounted on a yellow and black metal chassis with drive wheels" width="1600" height="1200" loading="lazy" decoding="async">
         </div>
         <div class="gtile-cap">
           <p class="gtile-eyebrow">Robotics · Computer Vision</p>
           <h3 class="gtile-name">CANIS</h3>
-          <p class="gtile-sub">Behavioral robotics · CV + FSM + RL rewards</p>
+          <p class="gtile-sub">Welfare-first behaviour robot · ArUco vision · state machine</p>
         </div>
       </div>
 
       <!-- LYRA (secondary) — opens LYRA -->
-      <div class="gtile gtile-sage proj-card-clickable" onclick="openModal('lyra')" tabindex="0" role="button" aria-label="Open LYRA project" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal('lyra')}">
+      <div class="gtile gtile-sage proj-card-clickable" data-cat="hardware" onclick="openModal('lyra')" tabindex="0" role="button" aria-label="Open LYRA project details" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal('lyra')}">
         <div class="gtile-media" style="aspect-ratio:5/4;">
-          <!-- SWAP: assets/projects/lyra-2.jpeg — replace this placeholder <span> with:
-               <img src="assets/projects/lyra-2.jpeg" alt="LYRA detail" loading="lazy"> -->
-          <span class="ph-mark">Photo</span>
+          <img src="assets/projects/lyra-2.webp" alt="LEGO EV3 sensor module on a red Technic arm — part of LYRA's gesture-driven robot-arm bridge" width="1600" height="1200" loading="lazy" decoding="async">
         </div>
         <div class="gtile-cap">
-          <p class="gtile-eyebrow">Detail · Firmware</p>
+          <p class="gtile-eyebrow">Detail · EV3 Bridge</p>
           <h3 class="gtile-name">LYRA</h3>
-          <p class="gtile-sub">ESP32-C3 · MPU-6050 · ~18ms latency</p>
+          <p class="gtile-sub">ESP32-C3 · MPU-6050 · EV3 robot-arm bridge</p>
         </div>
       </div>
 
       <!-- CANIS (secondary — CAD) — opens CANIS -->
-      <div class="gtile gtile-greige proj-card-clickable" onclick="openModal('canis')" tabindex="0" role="button" aria-label="Open CANIS project" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal('canis')}">
+      <div class="gtile gtile-greige proj-card-clickable" data-cat="robotics hardware" onclick="openModal('canis')" tabindex="0" role="button" aria-label="Open CANIS project details" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal('canis')}">
         <div class="gtile-media" style="aspect-ratio:4/3;">
-          <!-- SWAP: assets/projects/canis-cad.png — replace this placeholder <span> with:
-               <img src="assets/projects/canis-cad.png" alt="CANIS CAD model" loading="lazy"> -->
-          <span class="ph-mark">CAD</span>
+          <img src="assets/projects/canis-cad.webp" alt="CAD render of CANIS — treat-dispenser hopper and electronics deck under a translucent shell, with drive wheels" width="1000" height="820" loading="lazy" decoding="async">
         </div>
         <div class="gtile-cap">
           <p class="gtile-eyebrow">CAD · Mechanical</p>
@@ -484,47 +548,49 @@
 
     </div>
 
+    <p class="case-links aos">Deep dives: <a href="projects/lyra.html">LYRA case study</a> · <a href="projects/canis.html">CANIS case study</a> · <a href="projects/lynx.html">LYNX case study</a></p>
+
     <!-- OTHER PROJECTS -->
       <div style="margin-top:52px;">
         <h3 style="font-size:20px; font-weight:600; color:#141413; margin-bottom:14px; letter-spacing:-0.3px;">Other Projects</h3>
         <div style="background:#F0EEE6; border:1px solid #E2DFD5; border-radius:20px; overflow:hidden;">
           <!-- AI / Machine Learning -->
           <div class="proj-group-label">AI / Machine Learning</div>
-          <a href="https://github.com/Sidsolegend" target="_blank" style="display:flex; justify-content:space-between; align-items:center; padding:16px 28px; border-bottom:1px solid #E2DFD5; transition:background 0.15s; text-decoration:none;" style-hover="background:rgba(110,115,85,0.06)">
+          <a href="https://github.com/Sidsolegend" target="_blank" rel="noopener noreferrer" style="display:flex; justify-content:space-between; align-items:center; padding:16px 28px; border-bottom:1px solid #E2DFD5; transition:background 0.15s; text-decoration:none;" style-hover="background:rgba(110,115,85,0.06)">
             <span style="font-size:15px; font-weight:500; color:#141413;">Bacterial DNA Genome Projection Model</span>
-            <span style="font-size:13px; color:#6B6A63; white-space:nowrap;">Python · scikit-learn · GitHub ↗</span>
+            <span style="font-size:13px; color:#5F5E57; white-space:nowrap;">Python · scikit-learn · GitHub ↗</span>
           </a>
-          <a href="https://github.com/Sidsolegend" target="_blank" style="display:flex; justify-content:space-between; align-items:center; padding:16px 28px; border-bottom:1px solid #E2DFD5; transition:background 0.15s; text-decoration:none;" style-hover="background:rgba(110,115,85,0.06)">
+          <a href="https://github.com/Sidsolegend" target="_blank" rel="noopener noreferrer" style="display:flex; justify-content:space-between; align-items:center; padding:16px 28px; border-bottom:1px solid #E2DFD5; transition:background 0.15s; text-decoration:none;" style-hover="background:rgba(110,115,85,0.06)">
             <span style="font-size:15px; font-weight:500; color:#141413;">Alzheimer's Detection AI — MRI-based CNN classifier</span>
-            <span style="font-size:13px; color:#6B6A63; white-space:nowrap;">Python · TensorFlow · GitHub ↗</span>
+            <span style="font-size:13px; color:#5F5E57; white-space:nowrap;">Python · TensorFlow · GitHub ↗</span>
           </a>
-          <a href="https://github.com/Sidsolegend" target="_blank" style="display:flex; justify-content:space-between; align-items:center; padding:16px 28px; border-bottom:1px solid #E2DFD5; transition:background 0.15s; text-decoration:none;" style-hover="background:rgba(110,115,85,0.06)">
+          <a href="https://github.com/Sidsolegend" target="_blank" rel="noopener noreferrer" style="display:flex; justify-content:space-between; align-items:center; padding:16px 28px; border-bottom:1px solid #E2DFD5; transition:background 0.15s; text-decoration:none;" style-hover="background:rgba(110,115,85,0.06)">
             <span style="font-size:15px; font-weight:500; color:#141413;">AI Assistant (Python)</span>
-            <span style="font-size:13px; color:#6B6A63; white-space:nowrap;">Python · NLP · GitHub ↗</span>
+            <span style="font-size:13px; color:#5F5E57; white-space:nowrap;">Python · NLP · GitHub ↗</span>
           </a>
           <!-- Vision & HCI -->
           <div class="proj-group-label">Vision &amp; HCI</div>
-          <a href="https://github.com/Sidsolegend" target="_blank" style="display:flex; justify-content:space-between; align-items:center; padding:16px 28px; border-bottom:1px solid #E2DFD5; transition:background 0.15s; text-decoration:none;" style-hover="background:rgba(110,115,85,0.06)">
+          <a href="https://github.com/Sidsolegend" target="_blank" rel="noopener noreferrer" style="display:flex; justify-content:space-between; align-items:center; padding:16px 28px; border-bottom:1px solid #E2DFD5; transition:background 0.15s; text-decoration:none;" style-hover="background:rgba(110,115,85,0.06)">
             <span style="font-size:15px; font-weight:500; color:#141413;">Sign Language Converter — Hackathon 1st Place</span>
-            <span style="font-size:13px; color:#6B6A63; white-space:nowrap;">Python · OpenCV · GitHub ↗</span>
+            <span style="font-size:13px; color:#5F5E57; white-space:nowrap;">Python · OpenCV · GitHub ↗</span>
           </a>
-          <a href="https://github.com/Sidsolegend" target="_blank" style="display:flex; justify-content:space-between; align-items:center; padding:16px 28px; border-bottom:1px solid #E2DFD5; transition:background 0.15s; text-decoration:none;" style-hover="background:rgba(110,115,85,0.06)">
+          <a href="https://github.com/Sidsolegend" target="_blank" rel="noopener noreferrer" style="display:flex; justify-content:space-between; align-items:center; padding:16px 28px; border-bottom:1px solid #E2DFD5; transition:background 0.15s; text-decoration:none;" style-hover="background:rgba(110,115,85,0.06)">
             <span style="font-size:15px; font-weight:500; color:#141413;">Voice + Gesture Laptop Control</span>
-            <span style="font-size:13px; color:#6B6A63; white-space:nowrap;">Python · OpenCV · GitHub ↗</span>
+            <span style="font-size:13px; color:#5F5E57; white-space:nowrap;">Python · OpenCV · GitHub ↗</span>
           </a>
           <!-- Web & Apps -->
           <div class="proj-group-label">Web &amp; Apps</div>
-          <a href="https://github.com/Sidsolegend" target="_blank" style="display:flex; justify-content:space-between; align-items:center; padding:16px 28px; border-bottom:1px solid #E2DFD5; transition:background 0.15s; text-decoration:none;" style-hover="background:rgba(110,115,85,0.06)">
+          <a href="https://github.com/Sidsolegend" target="_blank" rel="noopener noreferrer" style="display:flex; justify-content:space-between; align-items:center; padding:16px 28px; border-bottom:1px solid #E2DFD5; transition:background 0.15s; text-decoration:none;" style-hover="background:rgba(110,115,85,0.06)">
             <span style="font-size:15px; font-weight:500; color:#141413;">T&amp;C Summarizer — Chrome Extension</span>
-            <span style="font-size:13px; color:#6B6A63; white-space:nowrap;">JavaScript · NLP · GitHub ↗</span>
+            <span style="font-size:13px; color:#5F5E57; white-space:nowrap;">JavaScript · NLP · GitHub ↗</span>
           </a>
-          <a href="https://github.com/Sidsolegend" target="_blank" style="display:flex; justify-content:space-between; align-items:center; padding:16px 28px; border-bottom:1px solid #E2DFD5; transition:background 0.15s; text-decoration:none;" style-hover="background:rgba(110,115,85,0.06)">
+          <a href="https://github.com/Sidsolegend" target="_blank" rel="noopener noreferrer" style="display:flex; justify-content:space-between; align-items:center; padding:16px 28px; border-bottom:1px solid #E2DFD5; transition:background 0.15s; text-decoration:none;" style-hover="background:rgba(110,115,85,0.06)">
             <span style="font-size:15px; font-weight:500; color:#141413;">Applevate — 3rd Place / 54 schools</span>
-            <span style="font-size:13px; color:#6B6A63; white-space:nowrap;">Mobile · 2024 · GitHub ↗</span>
+            <span style="font-size:13px; color:#5F5E57; white-space:nowrap;">Mobile · 2024 · GitHub ↗</span>
           </a>
-          <a href="https://github.com/Sidsolegend" target="_blank" style="display:flex; justify-content:space-between; align-items:center; padding:16px 28px; transition:background 0.15s; text-decoration:none;" style-hover="background:rgba(110,115,85,0.06)">
+          <a href="https://github.com/Sidsolegend" target="_blank" rel="noopener noreferrer" style="display:flex; justify-content:space-between; align-items:center; padding:16px 28px; transition:background 0.15s; text-decoration:none;" style-hover="background:rgba(110,115,85,0.06)">
             <span style="font-size:15px; font-weight:500; color:#141413;">Fitness App — Health Hackathon</span>
-            <span style="font-size:13px; color:#6B6A63; white-space:nowrap;">Team Project · GitHub ↗</span>
+            <span style="font-size:13px; color:#5F5E57; white-space:nowrap;">Team Project · GitHub ↗</span>
           </a>
         </div>
       </div>
@@ -535,13 +601,13 @@
 <section id="skills" style="padding:clamp(96px,12vw,176px) 32px; background:#F0EEE6; position:relative; overflow:hidden;">
   <div style="max-width:1120px; margin:0 auto;">
     <div style="text-align:left; margin-bottom:52px;">
-      <p style="font-size:12px; font-weight:600; color:#6E7355; text-transform:uppercase; letter-spacing:1.5px; margin-bottom:12px;">What I Work With</p>
+      <p style="font-size:12px; font-weight:600; color:#5C6145; text-transform:uppercase; letter-spacing:1.5px; margin-bottom:12px;">What I Work With</p>
       <h2 style="font-size:clamp(2rem, 4.5vw, 3rem); font-weight:700; letter-spacing:-0.02em; color:#141413;">Skills &amp; Technologies</h2>
     </div>
 
     <div class="grid-2">
       <div style="background:#E7E3D9; border-radius:20px; padding:32px; border:1px solid #E2DFD5;">
-        <h3 style="font-size:13px; font-weight:600; color:#6B6A63; text-transform:uppercase; letter-spacing:1px; margin-bottom:16px;">Programming</h3>
+        <h3 style="font-size:13px; font-weight:600; color:#5F5E57; text-transform:uppercase; letter-spacing:1px; margin-bottom:16px;">Programming</h3>
         <div style="display:flex; flex-wrap:wrap; gap:8px;">
           <span style="font-size:14px; font-weight:500; color:#141413; background:#F0EEE6; border:1px solid #E2DFD5; padding:8px 18px; border-radius:980px;">Python</span>
           <span style="font-size:14px; font-weight:500; color:#141413; background:#F0EEE6; border:1px solid #E2DFD5; padding:8px 18px; border-radius:980px;">C / C++</span>
@@ -552,18 +618,18 @@
       </div>
 
       <div style="background:#E7E3D9; border-radius:20px; padding:32px; border:1px solid #E2DFD5;">
-        <h3 style="font-size:13px; font-weight:600; color:#6B6A63; text-transform:uppercase; letter-spacing:1px; margin-bottom:16px;">AI / ML & Hardware</h3>
+        <h3 style="font-size:13px; font-weight:600; color:#5F5E57; text-transform:uppercase; letter-spacing:1px; margin-bottom:16px;">AI / ML & Hardware</h3>
         <div style="display:flex; flex-wrap:wrap; gap:8px;">
           <span style="font-size:14px; font-weight:500; color:#141413; background:#F0EEE6; border:1px solid #E2DFD5; padding:8px 18px; border-radius:980px;">Machine Learning</span>
           <span style="font-size:14px; font-weight:500; color:#141413; background:#F0EEE6; border:1px solid #E2DFD5; padding:8px 18px; border-radius:980px;">Computer Vision</span>
-          <span style="font-size:14px; font-weight:500; color:#141413; background:#F0EEE6; border:1px solid #E2DFD5; padding:8px 18px; border-radius:980px;">Reinforcement Learning</span>
+          <span style="font-size:14px; font-weight:500; color:#141413; background:#F0EEE6; border:1px solid #E2DFD5; padding:8px 18px; border-radius:980px;">State Machines &amp; Control</span>
           <span style="font-size:14px; font-weight:500; color:#141413; background:#F0EEE6; border:1px solid #E2DFD5; padding:8px 18px; border-radius:980px;">BLE / IMU</span>
           <span style="font-size:14px; font-weight:500; color:#141413; background:#F0EEE6; border:1px solid #E2DFD5; padding:8px 18px; border-radius:980px;">Embedded Systems</span>
         </div>
       </div>
 
       <div style="background:#E7E3D9; border-radius:20px; padding:32px; border:1px solid #E2DFD5;">
-        <h3 style="font-size:13px; font-weight:600; color:#6B6A63; text-transform:uppercase; letter-spacing:1px; margin-bottom:16px;">Platforms & Tools</h3>
+        <h3 style="font-size:13px; font-weight:600; color:#5F5E57; text-transform:uppercase; letter-spacing:1px; margin-bottom:16px;">Platforms & Tools</h3>
         <div style="display:flex; flex-wrap:wrap; gap:8px;">
           <span style="font-size:14px; font-weight:500; color:#141413; background:#F0EEE6; border:1px solid #E2DFD5; padding:8px 18px; border-radius:980px;">Raspberry Pi 5</span>
           <span style="font-size:14px; font-weight:500; color:#141413; background:#F0EEE6; border:1px solid #E2DFD5; padding:8px 18px; border-radius:980px;">ESP32</span>
@@ -574,7 +640,7 @@
       </div>
 
       <div style="background:#E7E3D9; border-radius:20px; padding:32px; border:1px solid #E2DFD5;">
-        <h3 style="font-size:13px; font-weight:600; color:#6B6A63; text-transform:uppercase; letter-spacing:1px; margin-bottom:16px;">Languages</h3>
+        <h3 style="font-size:13px; font-weight:600; color:#5F5E57; text-transform:uppercase; letter-spacing:1px; margin-bottom:16px;">Languages</h3>
         <div style="display:flex; flex-wrap:wrap; gap:8px;">
           <span style="font-size:14px; font-weight:500; color:#141413; background:#F0EEE6; border:1px solid #E2DFD5; padding:8px 18px; border-radius:980px;">English (Native)</span>
           <span style="font-size:14px; font-weight:500; color:#141413; background:#F0EEE6; border:1px solid #E2DFD5; padding:8px 18px; border-radius:980px;">French (DELF A2)</span>
@@ -649,7 +715,7 @@
       </div>
       <div class="award-item">
         <span class="award-label">John Locke Essay · 2026</span>
-        <p class="ai-text">Theology Category · Submitted</p>
+        <p class="ai-text">Theology Category · Shortlisted</p>
       </div>
     </div>
   </div>
@@ -659,7 +725,7 @@
 <section id="activities" style="padding:clamp(96px,12vw,176px) 32px; background:#F0EEE6;">
   <div style="max-width:1120px; margin:0 auto;">
     <div style="text-align:left; margin-bottom:52px;">
-      <p style="font-size:12px; font-weight:600; color:#6E7355; text-transform:uppercase; letter-spacing:1.5px; margin-bottom:12px;">Beyond the Lab</p>
+      <p style="font-size:12px; font-weight:600; color:#5C6145; text-transform:uppercase; letter-spacing:1.5px; margin-bottom:12px;">Beyond the Lab</p>
       <h2 style="font-size:clamp(2rem, 4.5vw, 3rem); font-weight:700; letter-spacing:-0.02em; color:#141413;">Extracurriculars</h2>
     </div>
 
@@ -667,64 +733,64 @@
       <div class="aos" style="background:#E7E3D9; border-radius:20px; padding:32px; transition:transform 0.3s;" style-hover="transform:translateY(-3px)">
         <div style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:4px;">
           <h3 style="font-size:18px; font-weight:600; color:#141413; letter-spacing:-0.3px;">Applied Physics Club (PULSE)</h3>
-          <span style="font-size:12px; font-weight:500; color:#6B6A63;">2025 – Present</span>
+          <span style="font-size:12px; font-weight:500; color:#5F5E57;">2025 – Present</span>
         </div>
-        <p style="font-size:13px; color:#6B6A63; margin-top:5px;">Founder & Vice-President</p>
-        <p style="font-size:14px; color:#6B6A63; margin-top:12px; line-height:1.65;">Founded the Applied Physics Club, organised interschool physics competitions and real-world challenge events. Represented at the Real World Challenges Convention (1st place).</p>
+        <p style="font-size:13px; color:#5F5E57; margin-top:5px;">Founder & Vice-President</p>
+        <p style="font-size:14px; color:#5F5E57; margin-top:12px; line-height:1.65;">Founded the Applied Physics Club, organised interschool physics competitions and real-world challenge events. Represented at the Real World Challenges Convention (1st place).</p>
       </div>
 
       <div class="aos" style="background:#E7E3D9; border-radius:20px; padding:32px; transition:transform 0.3s;" style-hover="transform:translateY(-3px)">
         <div style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:4px;">
           <h3 style="font-size:18px; font-weight:600; color:#141413; letter-spacing:-0.3px;">Math & Computing Club</h3>
-          <span style="font-size:12px; font-weight:500; color:#6B6A63;">2025 – Present</span>
+          <span style="font-size:12px; font-weight:500; color:#5F5E57;">2025 – Present</span>
         </div>
-        <p style="font-size:13px; color:#6B6A63; margin-top:5px;">Head of Academics</p>
-        <p style="font-size:14px; color:#6B6A63; margin-top:12px; line-height:1.65;">Led academic initiatives, facilitated peer learning sessions, and coordinated club programming activities.</p>
+        <p style="font-size:13px; color:#5F5E57; margin-top:5px;">Head of Academics</p>
+        <p style="font-size:14px; color:#5F5E57; margin-top:12px; line-height:1.65;">Led academic initiatives, facilitated peer learning sessions, and coordinated club programming activities.</p>
       </div>
 
       <div class="aos" style="background:#E7E3D9; border-radius:20px; padding:32px; transition:transform 0.3s;" style-hover="transform:translateY(-3px)">
         <div style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:4px;">
           <h3 style="font-size:18px; font-weight:600; color:#141413; letter-spacing:-0.3px;">GIIS Tech Club</h3>
-          <span style="font-size:12px; font-weight:500; color:#6B6A63;">2025 – Present</span>
+          <span style="font-size:12px; font-weight:500; color:#5F5E57;">2025 – Present</span>
         </div>
-        <p style="font-size:13px; color:#6B6A63; margin-top:5px;">Academic Team Member</p>
-        <p style="font-size:14px; color:#6B6A63; margin-top:12px; line-height:1.65;">Delivered programming workshops for lower secondary students (HTML, CSS, Python) — 180+ students reached. Co-organised the school's annual Hackathon.</p>
+        <p style="font-size:13px; color:#5F5E57; margin-top:5px;">Academic Team Member</p>
+        <p style="font-size:14px; color:#5F5E57; margin-top:12px; line-height:1.65;">Delivered programming workshops for lower secondary students (HTML, CSS, Python) — 180+ students reached. Co-organised the school's annual Hackathon.</p>
       </div>
 
       <div class="aos" style="background:#E7E3D9; border-radius:20px; padding:32px; transition:transform 0.3s;" style-hover="transform:translateY(-3px)">
         <div style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:4px;">
           <h3 style="font-size:18px; font-weight:600; color:#141413; letter-spacing:-0.3px;">Model United Nations</h3>
-          <span style="font-size:12px; font-weight:500; color:#6B6A63;">2020 – 2026 · 4 MUNs</span>
+          <span style="font-size:12px; font-weight:500; color:#5F5E57;">2020 – 2026 · 4 MUNs</span>
         </div>
-        <p style="font-size:13px; color:#6B6A63; margin-top:5px;">Delegate — Crisis Committee · Verbal Commendation</p>
-        <p style="font-size:14px; color:#6B6A63; margin-top:12px; line-height:1.65;">Earned Verbal Commendation at Grade 11 MUN. Participated in 4 conferences across school career, developing diplomacy and public speaking skills.</p>
+        <p style="font-size:13px; color:#5F5E57; margin-top:5px;">Delegate — Crisis Committee · Verbal Commendation</p>
+        <p style="font-size:14px; color:#5F5E57; margin-top:12px; line-height:1.65;">Earned Verbal Commendation at Grade 11 MUN. Participated in 4 conferences across school career, developing diplomacy and public speaking skills.</p>
       </div>
 
       <div class="aos" style="background:#E7E3D9; border-radius:20px; padding:32px; transition:transform 0.3s;" style-hover="transform:translateY(-3px)">
         <div style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:4px;">
           <h3 style="font-size:18px; font-weight:600; color:#141413; letter-spacing:-0.3px;">World Vision</h3>
-          <span style="font-size:12px; font-weight:500; color:#6B6A63;">Ongoing · 14+ hrs</span>
+          <span style="font-size:12px; font-weight:500; color:#5F5E57;">Ongoing · 14+ hrs</span>
         </div>
-        <p style="font-size:13px; color:#6B6A63; margin-top:5px;">Volunteer Tutor — English & Mathematics</p>
-        <p style="font-size:14px; color:#6B6A63; margin-top:12px; line-height:1.65;">Teaching English and Mathematics to underprivileged children every Friday.</p>
+        <p style="font-size:13px; color:#5F5E57; margin-top:5px;">Volunteer Tutor — English & Mathematics</p>
+        <p style="font-size:14px; color:#5F5E57; margin-top:12px; line-height:1.65;">Teaching English and Mathematics to underprivileged children every Friday.</p>
       </div>
 
       <div class="aos" style="background:#E7E3D9; border-radius:20px; padding:32px; transition:transform 0.3s;" style-hover="transform:translateY(-3px)">
         <div style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:4px;">
           <h3 style="font-size:18px; font-weight:600; color:#141413; letter-spacing:-0.3px;">GIIS Law Summit & Aviation Club</h3>
-          <span style="font-size:12px; font-weight:500; color:#6B6A63;">2024 – Present</span>
+          <span style="font-size:12px; font-weight:500; color:#5F5E57;">2024 – Present</span>
         </div>
-        <p style="font-size:13px; color:#6B6A63; margin-top:5px;">Mock Trial Delegate · Event Photographer · Finance & Logistics</p>
-        <p style="font-size:14px; color:#6B6A63; margin-top:12px; line-height:1.65;">Delegate in mock trial proceedings and official event photographer at the Law Summit — won school photography competition in 2024 and 2025. Finance & Logistics team for the Aviation & Astronomy Club.</p>
+        <p style="font-size:13px; color:#5F5E57; margin-top:5px;">Mock Trial Delegate · Event Photographer · Finance & Logistics</p>
+        <p style="font-size:14px; color:#5F5E57; margin-top:12px; line-height:1.65;">Delegate in mock trial proceedings and official event photographer at the Law Summit — won school photography competition in 2024 and 2025. Finance & Logistics team for the Aviation & Astronomy Club.</p>
       </div>
 
       <div class="aos" style="background:#E7E3D9; border-radius:20px; padding:32px; transition:transform 0.3s;" style-hover="transform:translateY(-3px)">
         <div style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:4px;">
           <h3 style="font-size:18px; font-weight:600; color:#141413; letter-spacing:-0.3px;">Sports</h3>
-          <span style="font-size:12px; font-weight:500; color:#6B6A63;">Ongoing</span>
+          <span style="font-size:12px; font-weight:500; color:#5F5E57;">Ongoing</span>
         </div>
-        <p style="font-size:13px; color:#6B6A63; margin-top:5px;">Cricket Vice-Captain · Swimming · Krav Maga</p>
-        <p style="font-size:14px; color:#6B6A63; margin-top:12px; line-height:1.65;">Vice-Captain of inter-house cricket team. SwimSafer Gold certified swimmer. 2+ years of Krav Maga self-defence training.</p>
+        <p style="font-size:13px; color:#5F5E57; margin-top:5px;">Cricket Vice-Captain · Swimming · Krav Maga</p>
+        <p style="font-size:14px; color:#5F5E57; margin-top:12px; line-height:1.65;">Vice-Captain of inter-house cricket team. SwimSafer Gold certified swimmer. 2+ years of Krav Maga self-defence training.</p>
       </div>
     </div>
   </div>
@@ -734,7 +800,7 @@
 <section id="timeline" style="padding:clamp(96px,12vw,176px) 32px; background:#E7E3D9;">
   <div style="max-width:1120px; margin:0 auto;">
     <div style="text-align:left; margin-bottom:72px;">
-      <p style="font-size:12px; font-weight:600; color:#6E7355; text-transform:uppercase; letter-spacing:1.5px; margin-bottom:12px;">The Journey</p>
+      <p style="font-size:12px; font-weight:600; color:#5C6145; text-transform:uppercase; letter-spacing:1.5px; margin-bottom:12px;">The Journey</p>
       <h2 style="font-size:clamp(2rem, 4.5vw, 3rem); font-weight:700; letter-spacing:-0.02em; color:#141413;">My Story</h2>
     </div>
 
@@ -747,11 +813,11 @@
         </div>
         <div style="flex:1; padding-bottom:0;">
           <div style="display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:6px;">
-            <span style="font-size:12px; font-weight:700; color:#6B6A63; letter-spacing:0.5px;">2020</span>
-            <span style="font-size:11px; font-weight:500; color:#6B6A63;">Start</span>
+            <span style="font-size:12px; font-weight:700; color:#5F5E57; letter-spacing:0.5px;">2020</span>
+            <span style="font-size:11px; font-weight:500; color:#5F5E57;">Start</span>
           </div>
           <h3 style="font-size:19px; font-weight:600; color:#141413; letter-spacing:-0.3px;">First MUN & Competitive Math</h3>
-          <p style="font-size:14px; color:#6B6A63; margin-top:6px; line-height:1.65;">Joined my first Model United Nations conference and started competing in mathematics — sparking a habit of showing up to hard rooms.</p>
+          <p style="font-size:14px; color:#5F5E57; margin-top:6px; line-height:1.65;">Joined my first Model United Nations conference and started competing in mathematics — sparking a habit of showing up to hard rooms.</p>
         </div>
       </div>
 
@@ -761,11 +827,11 @@
         </div>
         <div style="flex:1;">
           <div style="display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:6px;">
-            <span style="font-size:12px; font-weight:700; color:#6B6A63; letter-spacing:0.5px;">2023</span>
-            <span style="font-size:11px; font-weight:500; color:#6B6A63;">First Code</span>
+            <span style="font-size:12px; font-weight:700; color:#5F5E57; letter-spacing:0.5px;">2023</span>
+            <span style="font-size:11px; font-weight:500; color:#5F5E57;">First Code</span>
           </div>
           <h3 style="font-size:19px; font-weight:600; color:#141413; letter-spacing:-0.3px;">Taught Myself Python</h3>
-          <p style="font-size:14px; color:#6B6A63; margin-top:6px; line-height:1.65;">Started self-learning Python in Grade 9. Built my first AI assistant — a simple NLP chatbot that made me realize software could do real things.</p>
+          <p style="font-size:14px; color:#5F5E57; margin-top:6px; line-height:1.65;">Started self-learning Python in Grade 9. Built my first AI assistant — a simple NLP chatbot that made me realize software could do real things.</p>
         </div>
       </div>
 
@@ -775,11 +841,11 @@
         </div>
         <div style="flex:1;">
           <div style="display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:6px;">
-            <span style="font-size:12px; font-weight:700; color:#6B6A63; letter-spacing:0.5px;">2025</span>
-            <span style="font-size:11px; font-weight:500; color:#6B6A63;">Breakthrough Year</span>
+            <span style="font-size:12px; font-weight:700; color:#5F5E57; letter-spacing:0.5px;">2025</span>
+            <span style="font-size:11px; font-weight:500; color:#5F5E57;">Breakthrough Year</span>
           </div>
           <h3 style="font-size:19px; font-weight:600; color:#141413; letter-spacing:-0.3px;">IGCSE 8A* · Applevate · Real World Challenges</h3>
-          <p style="font-size:14px; color:#6B6A63; margin-top:6px; line-height:1.65;">Finished IGCSE with 8A* and an ICE Distinction. Placed 3rd out of 54 schools at Applevate with a senior-citizens app, and won 1st at the Real World Challenges Convention with a maze robot.</p>
+          <p style="font-size:14px; color:#5F5E57; margin-top:6px; line-height:1.65;">Finished IGCSE with 8A* and an ICE Distinction. Placed 3rd out of 54 schools at Applevate with a senior-citizens app, and won 1st at the Real World Challenges Convention with a maze robot.</p>
         </div>
       </div>
 
@@ -789,11 +855,11 @@
         </div>
         <div style="flex:1;">
           <div style="display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:6px;">
-            <span style="font-size:12px; font-weight:700; color:#6B6A63; letter-spacing:0.5px;">2026</span>
-            <span style="font-size:11px; font-weight:500; color:#6B6A63;">Leadership</span>
+            <span style="font-size:12px; font-weight:700; color:#5F5E57; letter-spacing:0.5px;">2026</span>
+            <span style="font-size:11px; font-weight:500; color:#5F5E57;">Leadership</span>
           </div>
           <h3 style="font-size:19px; font-weight:600; color:#141413; letter-spacing:-0.3px;">Founded PULSE · IBDP Year 1: 40/42 · IB Grant</h3>
-          <p style="font-size:14px; color:#6B6A63; margin-top:6px; line-height:1.65;">Founded the Applied Physics Club, scored 40/42 in IBDP Year 1, and secured a USD 1,200 IB Global Youth Action Fund grant to build the FIRE platform.</p>
+          <p style="font-size:14px; color:#5F5E57; margin-top:6px; line-height:1.65;">Founded the Applied Physics Club, scored 40/42 in IBDP Year 1, and secured a USD 1,200 IB Global Youth Action Fund grant to build the FIRE platform.</p>
         </div>
       </div>
 
@@ -803,11 +869,11 @@
         </div>
         <div style="flex:1;">
           <div style="display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:6px;">
-            <span style="font-size:12px; font-weight:700; color:#6B6A63; letter-spacing:0.5px;">2026</span>
-            <span style="font-size:11px; font-weight:500; color:#6B6A63;">Shipping</span>
+            <span style="font-size:12px; font-weight:700; color:#5F5E57; letter-spacing:0.5px;">2026</span>
+            <span style="font-size:11px; font-weight:500; color:#5F5E57;">Shipping</span>
           </div>
           <h3 style="font-size:19px; font-weight:600; color:#141413; letter-spacing:-0.3px;">Physics Bowl Bronze · SMO Silver · KPIT · LYNX</h3>
-          <p style="font-size:14px; color:#6B6A63; margin-top:6px; line-height:1.65;">Physics Bowl Asian Bronze, SMO Final Round Silver, interned at KPIT Technologies in AI & Digital Solutions, and built LYNX — a 12-DOF quadruped competing at NRC Singapore in August.</p>
+          <p style="font-size:14px; color:#5F5E57; margin-top:6px; line-height:1.65;">Physics Bowl Asian Bronze, SMO Final Round Silver, interned at KPIT Technologies in AI & Digital Solutions, and kicked off LYNX — a 12-DOF quadruped (team of six, build starting July) targeting NRC Singapore in August.</p>
         </div>
       </div>
 
@@ -818,10 +884,10 @@
         <div style="flex:1;">
           <div style="display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:6px;">
             <span style="font-size:12px; font-weight:700; color:#141413; letter-spacing:0.5px;">Now</span>
-            <span style="font-size:11px; font-weight:500; color:#6B6A63;">2026–27</span>
+            <span style="font-size:11px; font-weight:500; color:#5F5E57;">2026–27</span>
           </div>
           <h3 style="font-size:19px; font-weight:600; color:#141413; letter-spacing:-0.3px;">IBDP Year 2 · Applying to EECS & Computer Engineering</h3>
-          <p style="font-size:14px; color:#6B6A63; margin-top:6px; line-height:1.65;">Completing the IB Diploma while building CANIS, LYRA, and LYNX. Applying to leading EECS and Computer Engineering programs in the US, Singapore, UK, and Europe.</p>
+          <p style="font-size:14px; color:#5F5E57; margin-top:6px; line-height:1.65;">Completing the IB Diploma while building CANIS, LYRA, and LYNX. Applying to leading EECS and Computer Engineering programs in the US, Singapore, UK, and Europe.</p>
         </div>
       </div>
 
@@ -834,30 +900,32 @@
   <div style="position:absolute; top:50%; left:50%; width:800px; height:800px; transform:translate(-50%,-50%); background:radial-gradient(circle, rgba(110,115,85,0.14) 0%, transparent 58%); pointer-events:none;"></div>
 
   <div style="position:relative; z-index:1; max-width:560px; margin:0 auto;">
-    <p style="font-size:12px; font-weight:600; color:#6E7355; text-transform:uppercase; letter-spacing:1.5px; margin-bottom:14px;">Say Hello</p>
+    <p style="font-size:12px; font-weight:600; color:#5C6145; text-transform:uppercase; letter-spacing:1.5px; margin-bottom:14px;">Say Hello</p>
     <h2 style="font-size:clamp(2.5rem, 5.5vw, 3.5rem); font-weight:700; letter-spacing:-0.02em; color:#F0EEE6; line-height:1.05;">Let's connect.</h2>
     <p style="font-size:18px; color:rgba(240,238,230,0.55); margin-top:20px; line-height:1.6;">Interested in talking about engineering, research, or collaboration? I'd love to hear from you.</p>
 
     <div style="display:flex; gap:14px; justify-content:center; margin-top:40px; flex-wrap:wrap;">
       <a href="mailto:sidb0901@gmail.com" style="font-size:15px; font-weight:600; color:#141413; text-decoration:none; background:#F0EEE6; padding:14px 30px; border-radius:12px; transition:transform 0.2s, background 0.2s;" style-hover="transform:translateY(-1px); background:#FFFFFF">sidb0901@gmail.com</a>
-      <a href="#" style="font-size:15px; font-weight:500; color:rgba(240,238,230,0.9); text-decoration:none; background:rgba(240,238,230,0.08); border:1px solid rgba(240,238,230,0.18); padding:14px 30px; border-radius:12px; transition:background 0.2s;" style-hover="background:rgba(240,238,230,0.14)">Resume ↓</a>
+      <a href="mailto:sidb0901@gmail.com?subject=Resume%20request" style="font-size:15px; font-weight:500; color:rgba(240,238,230,0.9); text-decoration:none; background:rgba(240,238,230,0.08); border:1px solid rgba(240,238,230,0.18); padding:14px 30px; border-radius:12px; transition:background 0.2s;" style-hover="background:rgba(240,238,230,0.14)">Request Resume</a>
     </div>
     <div style="display:flex; gap:28px; justify-content:center; margin-top:20px;">
-      <a href="https://github.com/Sidsolegend" target="_blank" style="font-size:14px; color:rgba(240,238,230,0.4); text-decoration:none; transition:color 0.2s;" style-hover="color:#6E7355">GitHub</a>
-      <a href="https://www.linkedin.com/in/siddharth0901bansal/" target="_blank" style="font-size:14px; color:rgba(240,238,230,0.4); text-decoration:none; transition:color 0.2s;" style-hover="color:#6E7355">LinkedIn</a>
+      <a href="https://github.com/Sidsolegend" target="_blank" rel="noopener noreferrer" style="font-size:14px; color:rgba(240,238,230,0.65); text-decoration:none; transition:color 0.2s;" style-hover="color:#C8CDB0">GitHub</a>
+      <a href="https://www.linkedin.com/in/siddharth0901bansal/" target="_blank" rel="noopener noreferrer" style="font-size:14px; color:rgba(240,238,230,0.65); text-decoration:none; transition:color 0.2s;" style-hover="color:#C8CDB0">LinkedIn</a>
     </div>
   </div>
 </section>
 
+</main>
+
 <!-- ═══ FOOTER ═══ -->
 <footer style="padding:20px 32px; background:#141413; border-top:1px solid rgba(240,238,230,0.08); text-align:center;">
-  <p style="font-size:12px; color:rgba(240,238,230,0.28);">© 2026 Siddharth Bansal</p>
+  <p style="font-size:12px; color:rgba(240,238,230,0.62);">© 2026 Siddharth Bansal</p>
 </footer>
 
 <!-- ═══ PROJECT MODAL ═══ -->
 <div id="project-modal" onclick="if(event.target===this)closeModal()">
-  <div id="modal-inner">
-    <button id="modal-close" onclick="closeModal()">✕</button>
+  <div id="modal-inner" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button id="modal-close" onclick="closeModal()" aria-label="Close project details">✕</button>
     <div id="modal-header"></div>
     <div style="padding:32px 44px 44px;">
       <p id="modal-desc" style="font-size:16px; color:#141413; line-height:1.75;"></p>
@@ -872,23 +940,24 @@
 const PROJECTS = {
   lynx: {
     title: 'LYNX',
-    subtitle: '12-DOF Autonomous Quadruped Robot',
-    status: 'Competing · NRC Singapore Open Category · Aug 2026',
+    subtitle: '12-DOF Quadruped Robot — Team of 6',
+    status: 'In Progress · Build starts Jul 2026 · NRC Singapore Aug 2026',
     grad: 'linear-gradient(135deg, #141413 0%, #1b1e16 60%, #2a2e22 100%)',
     statusColor: '#C8CDB0',
-    desc: 'SpotMicro ESP32 platform running Leika firmware, with autonomous person-following and obstacle avoidance powered by a Raspberry Pi 5. 12 degrees of freedom, full gait control, real-time CV pipeline on-device. Legs over wheels — because real terrain is not flat.',
+    desc: 'SpotMicro-class 12-DOF quadruped, built by a team of six on Rune Harlyk\'s open-source (MIT) SpotMicroESP32-Leika platform. My original work on top: the Raspberry Pi 5 ↔ ESP32 UART bridge, a person-following vision state machine, and a full 0.65× downsizing analysis — scaled STL set, torque math, and an under-S$100 BOM sized to an 18-hour print budget.',
     specs: [
-      ['Platform', 'SpotMicro ESP32 + Raspberry Pi 5'],
-      ['Firmware', 'Leika'],
-      ['DOF', '12 — full quadruped gait'],
-      ['Autonomy', 'Person-following · Obstacle avoidance'],
-      ['Vision', 'Real-time CV pipeline (RPi5)'],
-      ['Competition', 'NRC Singapore · Open Category · Aug 2026'],
+      ['Base platform', 'SpotMicroESP32-Leika — Rune Harlyk (open source, MIT)'],
+      ['DOF', '12 — 3 per leg'],
+      ['Compute', 'Raspberry Pi 5 + ESP32 · UART bridge'],
+      ['Autonomy', 'Person-following vision state machine (designed)'],
+      ['Downsizing', '0.65× scaled STLs · torque math · <S$100 BOM'],
+      ['Status', 'Team of 6 · build starts Jul 2026 · NRC Singapore Aug 2026'],
     ],
-    tags: ['ESP32', 'Raspberry Pi 5', 'Computer Vision', 'Leika Firmware', 'Embedded C++'],
+    tags: ['ESP32', 'Raspberry Pi 5', 'Computer Vision', 'UART', '3D Printing', 'Team of 6'],
     github: 'https://github.com/Sidsolegend',
     githubLabel: 'GitHub (Private)',
     live: null,
+    page: 'projects/lynx.html',
   },
   fire: {
     title: 'FIRE',
@@ -913,43 +982,45 @@ const PROJECTS = {
   },
   canis: {
     title: 'CANIS',
-    subtitle: 'Canine Autonomy & Neural Intelligence System',
-    status: 'Prototype · Active',
+    subtitle: 'Welfare-First Behaviour Robot',
+    status: 'Built · Working',
     grad: 'linear-gradient(135deg, #141413 0%, #1f2318 55%, #303526 100%)',
     statusColor: '#C8CDB0',
-    desc: 'Behavioral robotics system built for my dog Shifu. Uses computer vision to detect behavioral states (barking, biting, drift), a finite state machine to classify intent, and a multi-controller architecture to trigger treat dispensing as positive reinforcement — closing the loop between observation and correction.',
+    desc: 'A behaviour-shaping robot built for my fearful dog, Shifu. A Raspberry Pi 5 tracks position with ArUco marker vision, an ESP32 runs an arousal state machine with hysteresis and graded exposure levels, and an Arduino drives the treat dispenser. CANIS rewards Shifu for choosing to leave a zone — it never punishes, and never advances exposure at low levels. A ~1-second motion watchdog halts everything if the vision feed stalls.',
     specs: [
       ['Subject', 'Shifu (the dog)'],
-      ['Architecture', 'Multi-controller · Distributed'],
-      ['Perception', 'Computer Vision — behavioral state detection'],
-      ['Logic', 'Finite State Machine'],
-      ['Learning', 'Reinforcement learning · treat-based rewards'],
-      ['Targets', 'Barking · Biting · Habit correction'],
+      ['Perception', 'Raspberry Pi 5 · ArUco marker tracking'],
+      ['Behaviour logic', 'ESP32 arousal state machine · hysteresis · graded exposure'],
+      ['Fail-safe', '~1 s motion watchdog'],
+      ['Dispenser', 'Arduino-driven treat mechanism'],
+      ['Principle', 'Rewards leaving a zone — never punishes'],
     ],
-    tags: ['Python', 'Computer Vision', 'Reinforcement Learning', 'FSM', 'Embedded Systems'],
+    tags: ['Raspberry Pi 5', 'ESP32', 'Arduino', 'OpenCV · ArUco', 'State Machines'],
     github: 'https://github.com/Sidsolegend',
     githubLabel: 'GitHub (Private)',
     live: null,
+    page: 'projects/canis.html',
   },
   lyra: {
     title: 'LYRA',
-    subtitle: 'Wearable Gesture-Based HCI System',
-    status: 'Prototype · Active',
+    subtitle: 'Wrist-Worn Gesture Interface',
+    status: 'Built · Working',
     grad: 'linear-gradient(135deg, #141413 0%, #191c15 55%, #272b20 100%)',
     statusColor: '#C8CDB0',
-    desc: 'Wearable gesture-to-control module. MPU-6050 on ESP32-C3 streams 6-DOF IMU data over BLE 5.0 to a CNN inference pipeline on the host, classifying 6 gesture classes and translating them into real-time keyboard and mouse events at ~18ms average latency.',
+    desc: 'Wrist-worn wearable that turns hand gestures into media control. An MPU-6050 IMU on an ESP32-C3 feeds an on-device two-stage classifier — a rule gate followed by a decision tree over 9 IMU features — which emits BLE-HID media commands. A Flutter app handles per-user calibration, and a bridge mode drives a LEGO EV3 robot arm. Cross-user (leave-one-subject-out): 79% accuracy overall, 99% on flick, 10% false-positive rate, on a 419-sample, 4-subject dataset with a reproducible analysis pipeline.',
     specs: [
-      ['MCU', 'ESP32-C3 (RISC-V · 160 MHz)'],
-      ['IMU', 'MPU-6050 · 6-DOF accel + gyro'],
-      ['Link', 'BLE 5.0'],
-      ['Inference', 'CNN · TFLite · Python host'],
-      ['Latency', '~18ms average'],
-      ['Gestures', 'SWIPE_L · SWIPE_R · SCROLL_U · SCROLL_D · CLICK · NEUTRAL'],
+      ['MCU', 'ESP32-C3 (RISC-V)'],
+      ['IMU', 'MPU-6050 · 6-axis accel + gyro'],
+      ['Classifier', '2-stage, on-device: rule gate + decision tree · 9 IMU features'],
+      ['Output', 'BLE-HID media control · LEGO EV3 robot-arm bridge'],
+      ['Cross-user accuracy', '79% overall · 99% flick · 10% FPR (leave-one-subject-out)'],
+      ['Dataset', '419 samples · 4 subjects · reproducible pipeline'],
     ],
-    tags: ['MPU-6050', 'ESP32-C3', 'BLE 5.0', 'CNN · TFLite', 'Python', 'Haptic Feedback'],
+    tags: ['ESP32-C3', 'MPU-6050', 'BLE-HID', 'Decision Tree', 'Flutter', 'LEGO EV3'],
     github: 'https://github.com/Sidsolegend',
     githubLabel: 'GitHub (Private)',
     live: null,
+    page: 'projects/lyra.html',
   },
 };
 
@@ -960,7 +1031,7 @@ function openModal(key) {
   document.getElementById('modal-header').innerHTML = `
     <div style="background:${p.grad}; padding:52px 44px 40px; position:relative;">
       <span style="font-size:11px; font-weight:600; color:${p.statusColor}; text-transform:uppercase; letter-spacing:1.5px;">${p.status}</span>
-      <h2 style="font-family:'General Sans','Inter',system-ui,sans-serif; font-size:52px; font-weight:700; letter-spacing:-2.5px; color:#F0EEE6; margin-top:10px; line-height:0.95;">${p.title}</h2>
+      <h2 id="modal-title" style="font-family:'General Sans','Inter',system-ui,sans-serif; font-size:52px; font-weight:700; letter-spacing:-2.5px; color:#F0EEE6; margin-top:10px; line-height:0.95;">${p.title}</h2>
       <p style="font-size:15px; color:rgba(240,238,230,0.55); margin-top:10px; font-style:italic;">${p.subtitle}</p>
     </div>`;
 
@@ -968,27 +1039,45 @@ function openModal(key) {
 
   document.getElementById('modal-specs').innerHTML = p.specs.map(([k, v]) => `
     <div style="background:#E7E3D9; border-radius:12px; padding:12px 16px;">
-      <p style="font-size:10px; font-weight:700; color:#6B6A63; text-transform:uppercase; letter-spacing:0.8px; margin-bottom:4px;">${k}</p>
+      <p style="font-size:10px; font-weight:700; color:#5F5E57; text-transform:uppercase; letter-spacing:0.8px; margin-bottom:4px;">${k}</p>
       <p style="font-size:13px; font-weight:500; color:#141413;">${v}</p>
     </div>`).join('');
 
   document.getElementById('modal-tags').innerHTML = p.tags.map(t =>
     `<span style="font-size:12px; font-weight:500; color:#141413; background:#E7E3D9; padding:6px 14px; border-radius:980px;">${t}</span>`).join('');
 
-  let links = `<a href="${p.github}" target="_blank" style="font-size:14px; font-weight:500; color:#141413; text-decoration:none; background:#E7E3D9; padding:11px 22px; border-radius:980px;">${p.githubLabel}</a>`;
-  if (p.live) links += `<a href="${p.live}" target="_blank" style="font-size:14px; font-weight:500; color:#F0EEE6; text-decoration:none; background:#141413; padding:12px 24px; border-radius:12px;">${p.liveLabel}</a>`;
+  let links = '';
+  if (p.page) links += `<a href="${p.page}" style="font-size:14px; font-weight:600; color:#F0EEE6; text-decoration:none; background:#141413; padding:12px 24px; border-radius:12px;">Full case study →</a>`;
+  links += `<a href="${p.github}" target="_blank" rel="noopener noreferrer" style="font-size:14px; font-weight:500; color:#141413; text-decoration:none; background:#E7E3D9; padding:11px 22px; border-radius:980px;">${p.githubLabel}</a>`;
+  if (p.live) links += `<a href="${p.live}" target="_blank" rel="noopener noreferrer" style="font-size:14px; font-weight:500; color:#F0EEE6; text-decoration:none; background:#141413; padding:12px 24px; border-radius:12px;">${p.liveLabel}</a>`;
   document.getElementById('modal-links').innerHTML = links;
 
   modal.classList.add('open');
   document.body.style.overflow = 'hidden';
+  lastFocus = document.activeElement;
+  document.getElementById('modal-close').focus();
 }
 
+let lastFocus = null;
 function closeModal() {
   document.getElementById('project-modal').classList.remove('open');
   document.body.style.overflow = '';
+  if (lastFocus && typeof lastFocus.focus === 'function') lastFocus.focus();
 }
 
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+// Escape closes the modal; Tab is trapped inside it while open
+document.addEventListener('keydown', e => {
+  const modal = document.getElementById('project-modal');
+  if (!modal.classList.contains('open')) return;
+  if (e.key === 'Escape') { closeModal(); return; }
+  if (e.key === 'Tab') {
+    const f = modal.querySelectorAll('button, a[href]');
+    if (!f.length) return;
+    const first = f[0], last = f[f.length - 1];
+    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+  }
+});
 
 // style-hover attribute processor (replaces dc-runtime hover handling)
 document.querySelectorAll('[style-hover]').forEach(el => {
@@ -1028,52 +1117,91 @@ window.addEventListener('scroll', () => {
 window.addEventListener('resize', onScrollFx, { passive: true });
 onScrollFx();
 
-// Scroll-in animations with staggered children (reveal once)
-const aosObserver = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); aosObserver.unobserve(e.target); } });
-}, { threshold: 0.12 });
-document.querySelectorAll('.aos').forEach(el => {
-  // Auto-stagger siblings that don't already carry a delay class
-  if (!/aos-d\d/.test(el.className) && el.parentElement) {
-    const sibs = Array.from(el.parentElement.children).filter(c => c.classList && c.classList.contains('aos'));
-    const i = sibs.indexOf(el);
-    if (i > 0) el.style.transitionDelay = Math.min(i * 0.08, 0.4) + 's';
-  }
-  aosObserver.observe(el);
-});
-
-// Active nav highlighting
-const navLinks = document.querySelectorAll('nav a[data-section]');
-const sections = Array.from(navLinks).map(a => document.getElementById(a.dataset.section)).filter(Boolean);
-const navObserver = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    const link = document.querySelector(`nav a[data-section="${e.target.id}"]`);
-    if (link) link.classList.toggle('nav-active', e.isIntersecting);
+// Scroll-in animations with staggered children (reveal once) — feature-detected
+if ('IntersectionObserver' in window) {
+  const aosObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); aosObserver.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.aos').forEach(el => {
+    // Auto-stagger siblings that don't already carry a delay class
+    if (!/aos-d\d/.test(el.className) && el.parentElement) {
+      const sibs = Array.from(el.parentElement.children).filter(c => c.classList && c.classList.contains('aos'));
+      const i = sibs.indexOf(el);
+      if (i > 0) el.style.transitionDelay = Math.min(i * 0.08, 0.4) + 's';
+    }
+    aosObserver.observe(el);
   });
-}, { rootMargin: '-20% 0px -70% 0px' });
-sections.forEach(s => navObserver.observe(s));
+
+  // Active nav highlighting
+  const sections = Array.from(document.querySelectorAll('nav a[data-section]'))
+    .map(a => document.getElementById(a.dataset.section)).filter(Boolean);
+  const navObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      const link = document.querySelector(`nav a[data-section="${e.target.id}"]`);
+      if (link) link.classList.toggle('nav-active', e.isIntersecting);
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+  sections.forEach(s => navObserver.observe(s));
+} else {
+  // No IntersectionObserver: reveal everything immediately
+  document.querySelectorAll('.aos').forEach(el => el.classList.add('in'));
+}
 
 /* ── Projects gallery masonry: give each tile a grid-row span from its height ── */
-(function () {
-  function layoutGallery() {
-    var g = document.querySelector('.gallery');
-    if (!g) return;
-    var cs = getComputedStyle(g);
-    var row = parseFloat(cs.gridAutoRows) || 6;
-    var gap = parseFloat(cs.rowGap) || 16;
-    g.querySelectorAll('.gtile').forEach(function (t) {
-      t.style.gridRowEnd = 'auto';
-      var h = t.getBoundingClientRect().height;
-      t.style.gridRowEnd = 'span ' + Math.max(1, Math.ceil((h + gap) / (row + gap)));
+function layoutGallery() {
+  var g = document.querySelector('.gallery');
+  if (!g) return;
+  var cs = getComputedStyle(g);
+  var row = parseFloat(cs.gridAutoRows) || 6;
+  var gap = parseFloat(cs.rowGap) || 16;
+  g.querySelectorAll('.gtile').forEach(function (t) {
+    if (t.classList.contains('is-hidden')) return;
+    t.style.gridRowEnd = 'auto';
+    var h = t.getBoundingClientRect().height;
+    t.style.gridRowEnd = 'span ' + Math.max(1, Math.ceil((h + gap) / (row + gap)));
+  });
+}
+window.addEventListener('load', layoutGallery);
+window.addEventListener('resize', layoutGallery);
+document.addEventListener('DOMContentLoaded', layoutGallery);
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(layoutGallery);
+document.querySelectorAll('.gallery img').forEach(function (img) {
+  if (img.complete) return;
+  img.addEventListener('load', layoutGallery);
+});
+
+/* ── Project category filters ── */
+document.querySelectorAll('.ftab').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    document.querySelectorAll('.ftab').forEach(function (b) {
+      b.classList.toggle('is-active', b === btn);
+      b.setAttribute('aria-pressed', b === btn ? 'true' : 'false');
     });
-  }
-  window.addEventListener('load', layoutGallery);
-  window.addEventListener('resize', layoutGallery);
-  document.addEventListener('DOMContentLoaded', layoutGallery);
-  if (document.fonts && document.fonts.ready) document.fonts.ready.then(layoutGallery);
-  document.querySelectorAll('.gallery img').forEach(function (img) {
-    if (img.complete) return;
-    img.addEventListener('load', layoutGallery);
+    var f = btn.dataset.filter || 'all';
+    document.querySelectorAll('.gallery .gtile').forEach(function (t) {
+      var cats = (t.dataset.cat || '').split(' ');
+      t.classList.toggle('is-hidden', f !== 'all' && cats.indexOf(f) === -1);
+    });
+    layoutGallery();
+  });
+});
+
+/* ── Mobile menu ── */
+(function () {
+  var btn = document.getElementById('menu-btn');
+  var menu = document.getElementById('mobile-menu');
+  if (!btn || !menu) return;
+  btn.addEventListener('click', function () {
+    var open = menu.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.textContent = open ? 'Close' : 'Menu';
+  });
+  menu.querySelectorAll('a').forEach(function (a) {
+    a.addEventListener('click', function () {
+      menu.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+      btn.textContent = 'Menu';
+    });
   });
 })();
 </script>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LYNX — 12-DOF Quadruped Robot · Siddharth Bansal</title>
+<meta name="description" content="Case study: LYNX, a SpotMicro-class 12-DOF quadruped (in progress, team of 6) based on Rune Harlyk's open-source SpotMicroESP32-Leika. Original work: Pi 5–ESP32 UART bridge, person-following vision state machine, and a 0.65× downsizing analysis.">
+<meta name="author" content="Siddharth Bansal">
+<meta name="theme-color" content="#F0EEE6">
+<link rel="canonical" href="https://sidbansal.me/projects/lynx.html">
+<meta property="og:title" content="LYNX — 12-DOF Quadruped Robot (In Progress)">
+<meta property="og:description" content="SpotMicro-class quadruped based on Rune Harlyk's SpotMicroESP32-Leika. Original work: Pi–ESP32 UART bridge, person-following vision state machine, 0.65× downsizing analysis with torque math and an under-S$100 BOM.">
+<meta property="og:url" content="https://sidbansal.me/projects/lynx.html">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://sidbansal.me/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23141413'/><text x='50%25' y='50%25' dy='.35em' text-anchor='middle' font-family='-apple-system,sans-serif' font-weight='700' font-size='13' fill='%23C8CDB0'>SB</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "LYNX",
+  "url": "https://sidbansal.me/projects/lynx.html",
+  "description": "SpotMicro-class 12-DOF quadruped (in progress, team of six) based on Rune Harlyk's open-source SpotMicroESP32-Leika. Original work: Raspberry Pi 5 to ESP32 UART bridge, person-following vision state machine, and a 0.65x downsizing analysis with scaled STLs, torque math and an under-S$100 BOM.",
+  "isBasedOn": "https://github.com/runeharlyk/SpotMicroESP32-Leika",
+  "creator": { "@type": "Person", "name": "Siddharth Bansal", "url": "https://sidbansal.me/" }
+}
+</script>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { background:#F0EEE6; color:#141413; -webkit-font-smoothing:antialiased; font-family:'General Sans','Inter',-apple-system,BlinkMacSystemFont,system-ui,'Segoe UI',sans-serif; }
+  ::selection { background:rgba(110,115,85,0.22); color:#141413; }
+  h1, h2, h3 { font-weight:700; letter-spacing:-0.025em; }
+  .serif { font-family:'Newsreader',Georgia,'Times New Roman',serif; font-optical-sizing:auto; }
+  a:focus-visible, button:focus-visible { outline:2px solid #141413; outline-offset:3px; }
+  .skip-link { position:absolute; left:-9999px; top:0; z-index:1000; background:#141413; color:#F0EEE6; padding:12px 22px; border-radius:0 0 12px 0; font-size:14px; font-weight:600; text-decoration:none; }
+  .skip-link:focus { left:0; }
+
+  .site-nav { position:fixed; top:0; left:0; right:0; z-index:100; background:rgba(236,234,227,0.85); backdrop-filter:saturate(180%) blur(20px); -webkit-backdrop-filter:saturate(180%) blur(20px); border-bottom:1px solid #E2DFD5; }
+  .nav-inner { max-width:1120px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; padding:0 32px; height:64px; }
+  .wordmark { font-size:16px; font-weight:700; letter-spacing:-0.03em; color:#141413; text-decoration:none; }
+  .back { font-size:13.5px; font-weight:600; color:#5F5E57; text-decoration:none; transition:color 0.2s; }
+  .back:hover { color:#141413; }
+
+  main { max-width:780px; margin:0 auto; padding:140px 24px 90px; }
+  .eyebrow { font-size:12px; font-weight:600; color:#5C6145; text-transform:uppercase; letter-spacing:1.6px; margin-bottom:14px; }
+  h1 { font-size:clamp(2.6rem,7vw,4rem); letter-spacing:-0.04em; line-height:1.0; }
+  .sub { font-size:clamp(1.1rem,2vw,1.3rem); color:#5F5E57; margin-top:14px; line-height:1.55; }
+  .status-pill { display:inline-block; font-size:12px; font-weight:600; color:#141413; background:#E7E3D9; border:1px solid #E2DFD5; padding:6px 16px; border-radius:980px; margin-top:20px; letter-spacing:0.04em; }
+
+  .attribution { background:#C8CDB0; border-radius:20px; padding:26px 30px; margin-top:36px; }
+  .attribution .k { font-size:11px; font-weight:700; color:#43483A; text-transform:uppercase; letter-spacing:1.4px; margin-bottom:10px; }
+  .attribution p { font-size:15.5px; line-height:1.7; color:#141413; }
+  .attribution a { color:#141413; font-weight:600; }
+
+  section { margin-top:56px; }
+  h2 { font-size:clamp(1.4rem,3vw,1.75rem); letter-spacing:-0.02em; margin-bottom:16px; }
+  p, li { font-size:16px; line-height:1.75; color:#141413; }
+  section > p + p { margin-top:14px; }
+  ul { padding-left:22px; display:flex; flex-direction:column; gap:8px; }
+  strong { font-weight:600; }
+
+  .spec-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:8px; }
+  @media (max-width:560px) { .spec-grid { grid-template-columns:1fr; } }
+  .spec { background:#E7E3D9; border-radius:14px; padding:14px 18px; }
+  .spec .k { font-size:10.5px; font-weight:700; color:#5F5E57; text-transform:uppercase; letter-spacing:0.8px; margin-bottom:5px; }
+  .spec .v { font-size:14px; font-weight:500; color:#141413; line-height:1.5; }
+
+  .results { width:100%; border-collapse:collapse; margin-top:8px; border:1px solid #E2DFD5; border-radius:16px; overflow:hidden; }
+  .results th, .results td { text-align:left; padding:13px 18px; font-size:14.5px; border-bottom:1px solid #E2DFD5; }
+  .results th { font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:#5F5E57; background:#E7E3D9; }
+  .results tr:last-child td { border-bottom:none; }
+
+  .next { margin-top:72px; padding-top:28px; border-top:1px solid #E2DFD5; display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+  .next a { font-size:14.5px; font-weight:600; color:#141413; text-decoration:none; }
+  .next a:hover { text-decoration:underline; text-underline-offset:3px; }
+
+  footer { padding:20px 32px; background:#141413; text-align:center; }
+  footer p { font-size:12px; color:rgba(240,238,230,0.62); }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation:none !important; transition:none !important; scroll-behavior:auto !important; }
+  }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<nav class="site-nav" aria-label="Primary">
+  <div class="nav-inner">
+    <a href="../index.html" class="wordmark">Siddharth Bansal</a>
+    <a href="../index.html#projects" class="back">← All projects</a>
+  </div>
+</nav>
+
+<main id="main">
+  <header>
+    <p class="eyebrow">Case Study · Robotics · Team of 6</p>
+    <h1>LYNX</h1>
+    <p class="sub serif">A SpotMicro-class 12-DOF quadruped, downsized to fit a school 3D-print budget and headed for NRC Singapore — currently in the analysis-and-preparation stage, with the physical build starting July 2026.</p>
+    <span class="status-pill">In Progress · Build starts Jul 2026 · NRC Singapore Aug 2026</span>
+  </header>
+
+  <div class="attribution">
+    <p class="k">Built on open source — attribution</p>
+    <p>LYNX is based on <a href="https://github.com/runeharlyk/SpotMicroESP32-Leika" target="_blank" rel="noopener noreferrer">Rune Harlyk's SpotMicroESP32-Leika</a>, an open-source (MIT-licensed) SpotMicro quadruped platform. The base mechanics, servo control and gait firmware are Harlyk's work. Everything described under "What I'm building" below is our team's original work on top of that foundation.</p>
+  </div>
+
+  <section>
+    <h2>The goal</h2>
+    <p>Build a 12-degree-of-freedom quadruped that can autonomously follow a person, and compete with it at NRC Singapore in August 2026. Legs instead of wheels, because the interesting control problems — gait, balance, terrain — only exist when you give up wheels.</p>
+    <p>This is a six-person team project; I lead the autonomy and systems-integration side.</p>
+  </section>
+
+  <section>
+    <h2>Constraints</h2>
+    <ul>
+      <li><strong>An 18-hour print budget.</strong> The full-size SpotMicro STL set takes far longer than the school printer time we can claim, so the robot had to shrink.</li>
+      <li><strong>Under S$100 bill of materials.</strong> Student budget, no sponsors.</li>
+      <li><strong>Shrinking a robot is not just scaling STLs.</strong> Torque requirements, servo choice, and structural margins all change with scale — the downsizing had to be justified with math, not vibes.</li>
+      <li><strong>Two brains, one body.</strong> The ESP32 (running Leika firmware) owns realtime servo/gait control; a Raspberry Pi 5 owns vision. They need a clean, reliable link.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>System architecture</h2>
+    <p>The division of labour keeps hard-realtime work and heavy compute on separate processors:</p>
+    <ul>
+      <li><strong>ESP32 — locomotion.</strong> Runs Harlyk's Leika firmware: 12-servo control (3 per leg) and gait generation.</li>
+      <li><strong>Raspberry Pi 5 — perception.</strong> Runs the person-detection pipeline and the following behaviour.</li>
+      <li><strong>UART bridge (original work).</strong> A serial protocol linking the two, so the Pi can command the quadruped without touching the realtime loop.</li>
+      <li><strong>Person-following vision state machine (original work).</strong> The following behaviour is structured as an explicit state machine — searching, tracking, following, lost-target recovery — rather than a single reactive loop.</li>
+    </ul>
+    <div class="spec-grid" style="margin-top:22px;">
+      <div class="spec"><p class="k">Base platform</p><p class="v">SpotMicroESP32-Leika — Rune Harlyk (open source, MIT)</p></div>
+      <div class="spec"><p class="k">DOF</p><p class="v">12 — 3 per leg</p></div>
+      <div class="spec"><p class="k">Compute</p><p class="v">Raspberry Pi 5 + ESP32 · UART bridge</p></div>
+      <div class="spec"><p class="k">Autonomy</p><p class="v">Person-following vision state machine</p></div>
+      <div class="spec"><p class="k">Scale</p><p class="v">0.65× downsized STL set</p></div>
+      <div class="spec"><p class="k">Team</p><p class="v">6 members · build starts Jul 2026</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>What I'm building (original work)</h2>
+    <ul>
+      <li><strong>The 0.65× downsizing analysis.</strong> A complete rescale of the platform to fit the 18-hour print budget: a scaled STL set, torque math verifying the servos can still drive the lighter, shorter legs with margin, and a bill of materials that lands under S$100.</li>
+      <li><strong>The Pi 5 ↔ ESP32 UART bridge</strong> connecting perception to locomotion.</li>
+      <li><strong>The person-following vision state machine</strong> that will drive the robot's behaviour at NRC.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Status</h2>
+    <table class="results">
+      <thead><tr><th scope="col">Workstream</th><th scope="col">State</th></tr></thead>
+      <tbody>
+        <tr><td>0.65× downsizing analysis (STLs · torque math · &lt;S$100 BOM)</td><td>Done</td></tr>
+        <tr><td>Pi 5 ↔ ESP32 UART bridge</td><td>Designed / in development</td></tr>
+        <tr><td>Person-following vision state machine</td><td>Designed / in development</td></tr>
+        <tr><td>Physical build</td><td>Starts July 2026</td></tr>
+        <tr><td>NRC Singapore (Open Category)</td><td>August 2026</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Honest limitations</h2>
+    <ul>
+      <li><strong>LYNX is not built yet.</strong> This page describes analysis and design work plus an open-source foundation — the physical robot starts printing in July 2026.</li>
+      <li><strong>The downsizing analysis is validated on paper and in CAD</strong>, not yet against hardware. Torque math with margins is a prediction; the printed legs will be the test.</li>
+      <li><strong>The person-following behaviour has not been field-tested</strong> — it exists as a designed state machine, not a demonstrated capability.</li>
+      <li><strong>Most of the locomotion stack is inherited</strong>, deliberately: the original contribution is the autonomy layer and the downsizing, and I'd rather be precise about that boundary than vague about it.</li>
+    </ul>
+  </section>
+
+  <nav class="next" aria-label="More case studies">
+    <a href="lyra.html">Next: LYRA — gesture wearable →</a>
+    <a href="canis.html">CANIS — welfare-first behaviour robot →</a>
+  </nav>
+</main>
+
+<footer>
+  <p>© 2026 Siddharth Bansal · <a href="../index.html" style="color:rgba(240,238,230,0.62);">sidbansal.me</a></p>
+</footer>
+
+</body>
+</html>
