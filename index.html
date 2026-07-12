@@ -486,6 +486,13 @@
         <p class="gt-sub">12-DOF quadruped · team of 6 · based on Rune Harlyk's open-source SpotMicroESP32-Leika · build starts Jul 2026 · NRC Singapore, Aug 2026.</p>
       </div>
 
+      <!-- RISC-V CPU — from-scratch soft processor: text tile (no photo) -->
+      <div class="gtile gtile-text proj-card-clickable" data-cat="hardware" onclick="openModal('riscv')" tabindex="0" role="button" aria-label="Open RISC-V CPU project details" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal('riscv')}">
+        <span class="gt-eyebrow">Computer Architecture · Built</span>
+        <h3 class="gt-name">RISC-V CPU</h3>
+        <p class="gt-sub">32-bit RV32IM soft processor in Verilog · single-cycle + 5-stage pipeline · custom assembler · synthesizable FPGA SoC · verified by differential testing.</p>
+      </div>
+
       <!-- LYRA (primary) -->
       <div class="gtile gtile-greige proj-card-clickable" data-cat="hardware ml" onclick="openModal('lyra')" tabindex="0" role="button" aria-label="Open LYRA project details" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal('lyra')}">
         <div class="gtile-media" style="aspect-ratio:4/5;">
@@ -1021,6 +1028,26 @@ const PROJECTS = {
     githubLabel: 'GitHub (Private)',
     live: null,
     page: 'projects/lyra.html',
+  },
+  riscv: {
+    title: 'RISC-V CPU',
+    subtitle: 'RV32IM Soft Processor — Verilog',
+    status: 'Built · Verified in Simulation · FPGA-Ready',
+    grad: 'linear-gradient(135deg, #141413 0%, #1a1d16 55%, #282c21 100%)',
+    statusColor: '#C8CDB0',
+    desc: 'A 32-bit RISC-V (RV32IM) processor written from scratch in Verilog — two microarchitectures on one instruction set: a single-cycle core and a classic 5-stage pipeline with full data forwarding, load-use stalls, and branch flushing. It adds machine-mode traps (Zicsr), memory-mapped I/O, my own two-pass assembler, and a synthesizable SoC for a Tang Nano 9K FPGA. Correctness is proven by differential testing: the same program runs on both cores and must produce byte-for-byte identical register and memory state — which is how I caught a real pipeline write/read timing bug.',
+    specs: [
+      ['ISA', 'RV32IM + Zicsr · machine-mode traps'],
+      ['Cores', 'Single-cycle + 5-stage pipeline (one ISA)'],
+      ['Hazards', 'Data forwarding · load-use stall · branch flush'],
+      ['Toolchain', 'Custom 2-pass assembler · Icarus Verilog · CI'],
+      ['FPGA', 'Synthesizable SoC · Tang Nano 9K · UART + LCD'],
+      ['Verification', 'Differential test — byte-for-byte core equivalence'],
+    ],
+    tags: ['Verilog', 'RISC-V', 'RV32IM', 'CPU Pipeline', 'FPGA', 'Computer Architecture'],
+    github: 'https://github.com/Sidsolegend',
+    githubLabel: 'GitHub (Private)',
+    live: null,
   },
 };
 
