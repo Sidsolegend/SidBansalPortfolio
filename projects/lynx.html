@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>LYNX — 12-DOF Quadruped Robot · Siddharth Bansal</title>
-<meta name="description" content="Case study: LYNX, a SpotMicro-class 12-DOF quadruped (in progress, team of 6) based on Rune Harlyk's open-source SpotMicroESP32-Leika. Original work: Pi 5–ESP32 UART bridge, person-following vision state machine, and a 0.65× downsizing analysis.">
+<meta name="description" content="Case study: LYNX, a SpotMicro-class 12-DOF quadruped (in progress) based on Rune Harlyk's open-source SpotMicroESP32-Leika. Original work: Pi 5–ESP32 UART bridge, person-following vision state machine, and a 0.65× downsizing analysis.">
 <meta name="author" content="Siddharth Bansal">
 <meta name="theme-color" content="#F0EEE6">
 <link rel="canonical" href="https://sidbansal.me/projects/lynx.html">
@@ -26,7 +26,7 @@
   "@type": "CreativeWork",
   "name": "LYNX",
   "url": "https://sidbansal.me/projects/lynx.html",
-  "description": "SpotMicro-class 12-DOF quadruped (in progress, team of six) based on Rune Harlyk's open-source SpotMicroESP32-Leika. Original work: Raspberry Pi 5 to ESP32 UART bridge, person-following vision state machine, and a 0.65x downsizing analysis with scaled STLs, torque math and an under-S$100 BOM.",
+  "description": "SpotMicro-class 12-DOF quadruped (in progress) based on Rune Harlyk's open-source SpotMicroESP32-Leika. Original work: Raspberry Pi 5 to ESP32 UART bridge, person-following vision state machine, and a 0.65x downsizing analysis with scaled STLs, torque math and an under-S$100 BOM.",
   "isBasedOn": "https://github.com/runeharlyk/SpotMicroESP32-Leika",
   "creator": { "@type": "Person", "name": "Siddharth Bansal", "url": "https://sidbansal.me/" }
 }
@@ -102,7 +102,7 @@
 
 <main id="main">
   <header>
-    <p class="eyebrow">Case Study · Robotics · Team of 6</p>
+    <p class="eyebrow">Case Study · Robotics · Solo Project</p>
     <h1>LYNX</h1>
     <p class="sub serif">A SpotMicro-class 12-DOF quadruped, downsized to fit a school 3D-print budget and headed for NRC Singapore — currently in the analysis-and-preparation stage, with the physical build starting July 2026.</p>
     <span class="status-pill">In Progress · Build starts Jul 2026 · NRC Singapore Aug 2026</span>
@@ -116,13 +116,13 @@
   <section>
     <h2>The goal</h2>
     <p>Build a 12-degree-of-freedom quadruped that can autonomously follow a person, and compete with it at NRC Singapore in August 2026. Legs instead of wheels, because the interesting control problems — gait, balance, terrain — only exist when you give up wheels.</p>
-    <p>This is a six-person team project; I lead the autonomy and systems-integration side.</p>
+    <p>This is a solo project; the autonomy, systems-integration and downsizing work on top of the open-source base is mine.</p>
   </section>
 
   <section>
     <h2>Constraints</h2>
     <ul>
-      <li><strong>An 18-hour print budget.</strong> The full-size SpotMicro STL set takes far longer than the school printer time we can claim, so the robot had to shrink.</li>
+      <li><strong>An 18-hour print budget.</strong> The full-size SpotMicro STL set takes far longer than the school printer time I can claim, so the robot had to shrink.</li>
       <li><strong>Under S$100 bill of materials.</strong> Student budget, no sponsors.</li>
       <li><strong>Shrinking a robot is not just scaling STLs.</strong> Torque requirements, servo choice, and structural margins all change with scale — the downsizing had to be justified with math, not vibes.</li>
       <li><strong>Two brains, one body.</strong> The ESP32 (running Leika firmware) owns realtime servo/gait control; a Raspberry Pi 5 owns vision. They need a clean, reliable link.</li>
@@ -144,7 +144,7 @@
       <div class="spec"><p class="k">Compute</p><p class="v">Raspberry Pi 5 + ESP32 · UART bridge</p></div>
       <div class="spec"><p class="k">Autonomy</p><p class="v">Person-following vision state machine</p></div>
       <div class="spec"><p class="k">Scale</p><p class="v">0.65× downsized STL set</p></div>
-      <div class="spec"><p class="k">Team</p><p class="v">6 members · build starts Jul 2026</p></div>
+      <div class="spec"><p class="k">Team</p><p class="v">Solo · build starts Jul 2026</p></div>
     </div>
   </section>
 
