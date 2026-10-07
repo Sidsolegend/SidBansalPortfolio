@@ -239,7 +239,7 @@
       "@type": "CreativeWork",
       "name": "LYNX",
       "url": "https://sidbansal.me/projects/lynx.html",
-      "description": "SpotMicro-class 12-DOF quadruped (in progress) based on Rune Harlyk's open-source SpotMicroESP32-Leika. Original work: a Raspberry Pi 5 to ESP32 UART bridge, a person-following vision state machine, and a 0.65x downsizing analysis with scaled STLs, torque math and an under-S$100 BOM.",
+      "description": "SpotMicro-class 12-DOF quadruped (slated) based on Rune Harlyk's open-source SpotMicroESP32-Leika. Original work: a Raspberry Pi 5 to ESP32 UART bridge, a person-following vision state machine, and a 0.65x downsizing analysis with scaled STLs, torque math and an under-S$100 BOM.",
       "isBasedOn": "https://github.com/runeharlyk/SpotMicroESP32-Leika",
       "creator": { "@id": "https://sidbansal.me/#person" }
     }
@@ -481,9 +481,9 @@
 
       <!-- LYNX — unbuilt quadruped: stays a sage text tile (no photo) -->
       <div class="gtile gtile-text proj-card-clickable" data-cat="robotics hardware" onclick="openModal('lynx')" tabindex="0" role="button" aria-label="Open LYNX project details" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal('lynx')}">
-        <span class="gt-eyebrow">Robotics · In Progress</span>
+        <span class="gt-eyebrow">Robotics · Slated</span>
         <h3 class="gt-name">LYNX</h3>
-        <p class="gt-sub">12-DOF quadruped · solo · based on Rune Harlyk's open-source SpotMicroESP32-Leika · in progress.</p>
+        <p class="gt-sub">12-DOF quadruped · solo · based on Rune Harlyk's open-source SpotMicroESP32-Leika · slated next.</p>
       </div>
 
       <!-- RISC-V CPU — from-scratch soft processor: text tile (no photo) -->
@@ -598,28 +598,27 @@
         </div>
       </div>
 
-      <!-- IN PROGRESS & UPCOMING -->
+      <!-- CURRENT & SLATED PROJECTS -->
       <div style="margin-top:52px;">
-        <h3 style="font-size:20px; font-weight:600; color:#141413; margin-bottom:14px; letter-spacing:-0.3px;">In Progress &amp; Upcoming</h3>
+        <h3 style="font-size:20px; font-weight:600; color:#141413; margin-bottom:14px; letter-spacing:-0.3px;">Current &amp; Slated Projects</h3>
         <div style="background:#F0EEE6; border:1px solid #E2DFD5; border-radius:20px; overflow:hidden;">
-          <div class="proj-group-label">In progress</div>
-          <div style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:4px 16px; padding:16px 28px; border-bottom:1px solid #E2DFD5;">
-            <span style="font-size:15px; font-weight:500; color:#141413; flex:1 1 260px;"><strong style="font-weight:700;">LYNX</strong> — 12-DOF quadruped robot with person-following autonomy, built on an open-source SpotMicro base</span>
-            <span style="font-size:13px; color:#5F5E57; white-space:nowrap;">Solo · In progress</span>
-          </div>
-          <div class="proj-group-label">Up next</div>
-          <div style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:4px 16px; padding:16px 28px; border-bottom:1px solid #E2DFD5;">
-            <span style="font-size:15px; font-weight:500; color:#141413; flex:1 1 260px;"><strong style="font-weight:700;">TENSEGRITY</strong> — SUPERball-inspired tensegrity lander testbed: instrumented drop tests against a rigid-box control</span>
-            <span style="font-size:13px; color:#5F5E57; white-space:nowrap;">Space robotics · Planned</span>
-          </div>
+          <div class="proj-group-label">Current</div>
           <div style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:4px 16px; padding:16px 28px; border-bottom:1px solid #E2DFD5;">
             <span style="font-size:15px; font-weight:500; color:#141413; flex:1 1 260px;"><strong style="font-weight:700;">VOLANS</strong> — Caltech M4-inspired micro drone that flies, lands, and drives on its ring-prop wheels, with an onboard camera</span>
-            <span style="font-size:13px; color:#5F5E57; white-space:nowrap;">Robotics · Design phase</span>
+            <span style="font-size:13px; color:#5F5E57; white-space:nowrap;">Robotics · CAD design in progress</span>
           </div>
-          <div class="proj-group-label">On hold</div>
+          <div style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:4px 16px; padding:16px 28px; border-bottom:1px solid #E2DFD5;">
+            <span style="font-size:15px; font-weight:500; color:#141413; flex:1 1 260px;"><strong style="font-weight:700;">TENSEGRITY</strong> — SUPERball-inspired tensegrity lander testbed: instrumented drop tests against a rigid-box control</span>
+            <span style="font-size:13px; color:#5F5E57; white-space:nowrap;">Space robotics · Current</span>
+          </div>
+          <div class="proj-group-label">Slated next</div>
+          <div style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:4px 16px; padding:16px 28px; border-bottom:1px solid #E2DFD5;">
+            <span style="font-size:15px; font-weight:500; color:#141413; flex:1 1 260px;"><strong style="font-weight:700;">LYNX</strong> — 12-DOF quadruped robot with person-following autonomy, built on an open-source SpotMicro base</span>
+            <span style="font-size:13px; color:#5F5E57; white-space:nowrap;">Solo · After VOLANS &amp; TENSEGRITY</span>
+          </div>
           <div style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:4px 16px; padding:16px 28px;">
             <span style="font-size:15px; font-weight:500; color:#141413; flex:1 1 260px;"><strong style="font-weight:700;">ORPHEUS</strong> — closed-loop acoustic levitation manipulator, studying how little hardware programmable control needs</span>
-            <span style="font-size:13px; color:#5F5E57; white-space:nowrap;">Planned for later</span>
+            <span style="font-size:13px; color:#5F5E57; white-space:nowrap;">After VOLANS &amp; TENSEGRITY</span>
           </div>
         </div>
       </div>
@@ -969,7 +968,7 @@ const PROJECTS = {
   lynx: {
     title: 'LYNX',
     subtitle: '12-DOF Quadruped Robot — Solo Build',
-    status: 'In Progress',
+    status: 'Slated · after VOLANS & TENSEGRITY',
     grad: 'linear-gradient(135deg, #141413 0%, #1b1e16 60%, #2a2e22 100%)',
     statusColor: '#C8CDB0',
     desc: 'SpotMicro-class 12-DOF quadruped, built on Rune Harlyk\'s open-source (MIT) SpotMicroESP32-Leika platform. My original work on top: the Raspberry Pi 5 ↔ ESP32 UART bridge, a person-following vision state machine, and a full 0.65× downsizing analysis — scaled STL set, torque math, and an under-S$100 BOM sized to an 18-hour print budget.',
@@ -979,7 +978,7 @@ const PROJECTS = {
       ['Compute', 'Raspberry Pi 5 + ESP32 · UART bridge'],
       ['Autonomy', 'Person-following vision state machine (designed)'],
       ['Downsizing', '0.65× scaled STLs · torque math · <S$100 BOM'],
-      ['Status', 'Solo · in progress'],
+      ['Status', 'Solo · slated next'],
     ],
     tags: ['ESP32', 'Raspberry Pi 5', 'Computer Vision', 'UART', '3D Printing'],
     github: 'https://github.com/Sidsolegend',
