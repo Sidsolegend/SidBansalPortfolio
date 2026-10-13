@@ -134,6 +134,15 @@
     .gtile-sub { font-size:12.5px; color:rgba(240,238,230,0.82); margin-top:5px; max-height:0; opacity:0; overflow:hidden; transition:max-height 0.4s ease, opacity 0.35s ease; }
     .gtile:hover .gtile-sub, .gtile:focus-visible .gtile-sub { max-height:48px; opacity:1; }
     /* LYNX — sage text tile (no photo, unbuilt) */
+    .hero-reel { max-width:1120px; margin:calc(-1 * clamp(40px,6vw,80px)) auto 0; padding:0 40px clamp(48px,7vw,96px); display:grid; grid-template-columns:1fr 1.5fr 1fr; gap:16px; background:#F0EEE6; }
+    .hero-reel figure { position:relative; margin:0; border-radius:22px; overflow:hidden; aspect-ratio:4/5; background:#141413; }
+    .hero-reel figure:nth-child(2) { aspect-ratio:auto; }
+    .hero-reel img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+    .hero-reel figcaption { position:absolute; left:16px; bottom:14px; font-size:10px; font-weight:600; letter-spacing:1.6px; text-transform:uppercase; color:#F0EEE6; text-shadow:0 1px 8px rgba(0,0,0,.5); }
+    @media (max-width:768px){ .hero-reel { grid-template-columns:1fr 1fr; padding:0 24px 56px; } .hero-reel figure:nth-child(2) { grid-column:1/-1; order:-1; aspect-ratio:16/10; } }
+    .gtile-dark .gtile-media { background:#141413; }
+    .gtile-paper .gtile-media { background:#fff; }
+    .gtile-cream .gtile-media { background:#FFFFE8; }
     .gtile-text { background:#C8CDB0; padding:26px; min-height:240px; display:flex; flex-direction:column; }
     .gtile-text .gt-eyebrow { font-size:10px; font-weight:600; text-transform:uppercase; letter-spacing:1.8px; color:#43483A; }
     .gtile-text .gt-name { font-family:'General Sans','Inter',system-ui,sans-serif; font-size:28px; font-weight:700; letter-spacing:-0.03em; color:#141413; margin-top:auto; line-height:1; }
@@ -300,6 +309,12 @@
     </div>
   </div>
 </section>
+
+<div class="hero-reel" aria-label="Selected builds">
+  <figure><img src="assets/projects/lyra-worn.webp" alt="LYRA gesture wearable on the wrist" width="415" height="900" decoding="async"><figcaption>LYRA · wearable</figcaption></figure>
+  <figure><img src="assets/projects/canis.webp" alt="CANIS robot chassis with Raspberry Pi 5" width="1600" height="1200" decoding="async"><figcaption>CANIS · robotics</figcaption></figure>
+  <figure><img src="assets/projects/volans-cad.webp" alt="VOLANS micro drone CAD sketch" width="590" height="680" decoding="async"><figcaption>VOLANS · in design</figcaption></figure>
+</div>
 
 <!-- ═══ BIO ═══ -->
 <section style="padding:clamp(64px,9vw,120px) 32px; background:#F0EEE6;">
@@ -486,17 +501,9 @@
         <p class="gt-sub">12-DOF quadruped · solo · based on Rune Harlyk's open-source SpotMicroESP32-Leika · slated next.</p>
       </div>
 
-      <!-- RISC-V CPU — from-scratch soft processor: text tile (no photo) -->
-      <div class="gtile gtile-text proj-card-clickable" data-cat="hardware" onclick="openModal('riscv')" tabindex="0" role="button" aria-label="Open RISC-V CPU project details" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal('riscv')}">
-        <span class="gt-eyebrow">Computer Architecture · Built</span>
-        <h3 class="gt-name">RISC-V CPU</h3>
-        <p class="gt-sub">32-bit RV32IM soft processor in Verilog · single-cycle + 5-stage pipeline · custom assembler · synthesizable FPGA SoC · verified by differential testing.</p>
-      </div>
-
-      <!-- LYRA (primary) -->
       <div class="gtile gtile-greige proj-card-clickable" data-cat="hardware ml" onclick="openModal('lyra')" tabindex="0" role="button" aria-label="Open LYRA project details" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal('lyra')}">
-        <div class="gtile-media" style="aspect-ratio:4/5;">
-          <img src="assets/projects/lyra.webp" alt="Early LYRA prototype worn on the wrist — an ESP32 board and MPU-6050 IMU wired on a breadboard" width="900" height="1200" loading="lazy" decoding="async">
+        <div class="gtile-media" style="aspect-ratio:5/8;">
+          <img src="assets/projects/lyra-worn.webp" alt="LYRA worn on the wrist — a 3D-printed black enclosure with the LYRA wordmark on a brown leather strap" width="415" height="900" loading="lazy" decoding="async">
         </div>
         <div class="gtile-cap">
           <p class="gtile-eyebrow">Wearable · HCI</p>
@@ -505,7 +512,6 @@
         </div>
       </div>
 
-      <!-- FIRE -->
       <div class="gtile gtile-sage proj-card-clickable" data-cat="ml" onclick="openModal('fire')" tabindex="0" role="button" aria-label="Open FIRE project details" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal('fire')}">
         <div class="gtile-media" style="aspect-ratio:16/10;">
           <img src="assets/projects/fire.webp" alt="The FIRE team — seven students in formal wear standing together on campus" width="1600" height="778" loading="lazy" decoding="async">
@@ -517,7 +523,17 @@
         </div>
       </div>
 
-      <!-- CANIS (primary) -->
+      <div class="gtile gtile-dark proj-card-clickable" data-cat="hardware" onclick="openModal('riscv')" tabindex="0" role="button" aria-label="Open RISC-V CPU project details" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal('riscv')}">
+        <div class="gtile-media" style="aspect-ratio:1/1;">
+          <img src="assets/projects/riscv-fpga.webp" alt="Tang Nano 9K FPGA running the RISC-V CPU, displaying elapsed time, 42,025 primes found and the largest prime, 506,461" width="1400" height="280" loading="lazy" decoding="async" style="object-fit:contain; object-position:center 32%;">
+        </div>
+        <div class="gtile-cap">
+          <p class="gtile-eyebrow">Computer Architecture · Running on FPGA</p>
+          <h3 class="gtile-name">RISC-V CPU</h3>
+          <p class="gtile-sub">RV32IM in Verilog · prime-sieve running on a Tang Nano 9K</p>
+        </div>
+      </div>
+
       <div class="gtile gtile-greige proj-card-clickable" data-cat="robotics ml" onclick="openModal('canis')" tabindex="0" role="button" aria-label="Open CANIS project details" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal('canis')}">
         <div class="gtile-media" style="aspect-ratio:1/1;">
           <img src="assets/projects/canis.webp" alt="CANIS chassis prototype — a Raspberry Pi 5 in a black case mounted on a yellow and black metal chassis with drive wheels" width="1600" height="1200" loading="lazy" decoding="async">
@@ -529,20 +545,29 @@
         </div>
       </div>
 
-      <!-- LYRA (secondary) — opens LYRA -->
-      <div class="gtile gtile-sage proj-card-clickable" data-cat="hardware" onclick="openModal('lyra')" tabindex="0" role="button" aria-label="Open LYRA project details" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal('lyra')}">
-        <div class="gtile-media" style="aspect-ratio:5/4;">
-          <img src="assets/projects/lyra-2.webp" alt="LEGO EV3 sensor module on a red Technic arm — part of LYRA's gesture-driven robot-arm bridge" width="1600" height="1200" loading="lazy" decoding="async">
+      <div class="gtile gtile-dark proj-card-clickable" data-cat="robotics hardware" onclick="openModal('volans')" tabindex="0" role="button" aria-label="Open VOLANS project details" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal('volans')}">
+        <div class="gtile-media" style="aspect-ratio:7/8;">
+          <img src="assets/projects/volans-cad.webp" alt="CAD sketch of VOLANS — four ring propellers around a central body in isometric view" width="590" height="680" loading="lazy" decoding="async">
         </div>
         <div class="gtile-cap">
-          <p class="gtile-eyebrow">Detail · EV3 Bridge</p>
-          <h3 class="gtile-name">LYRA</h3>
-          <p class="gtile-sub">ESP32-C3 · MPU-6050 · EV3 robot-arm bridge</p>
+          <p class="gtile-eyebrow">Robotics · Current</p>
+          <h3 class="gtile-name">VOLANS</h3>
+          <p class="gtile-sub">Fly-and-drive micro drone · CAD in progress</p>
         </div>
       </div>
 
-      <!-- CANIS (secondary — CAD) — opens CANIS -->
-      <div class="gtile gtile-greige proj-card-clickable" data-cat="robotics hardware" onclick="openModal('canis')" tabindex="0" role="button" aria-label="Open CANIS project details" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal('canis')}">
+      <div class="gtile gtile-paper proj-card-clickable" data-cat="hardware" onclick="openModal('physia')" tabindex="0" role="button" aria-label="Open Rolling Friction vs Pressure project details" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal('physia')}">
+        <div class="gtile-media" style="aspect-ratio:5/4;">
+          <img src="assets/projects/phys-ia-graph.webp" alt="Graph of coefficient of rolling friction against football inflation pressure with a reciprocal fit, R squared 0.98" width="861" height="560" loading="lazy" decoding="async" style="object-fit:contain; object-position:center 28%;">
+        </div>
+        <div class="gtile-cap">
+          <p class="gtile-eyebrow">Physics IA · Experimental</p>
+          <h3 class="gtile-name">Rolling Friction vs Pressure</h3>
+          <p class="gtile-sub">Reciprocal fit · R² = 0.98 · football on a ramp</p>
+        </div>
+      </div>
+
+      <div class="gtile gtile-cream proj-card-clickable" data-cat="robotics hardware" onclick="openModal('canis')" tabindex="0" role="button" aria-label="Open CANIS project details" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal('canis')}">
         <div class="gtile-media" style="aspect-ratio:4/3;">
           <img src="assets/projects/canis-cad.webp" alt="CAD render of CANIS — treat-dispenser hopper and electronics deck under a translucent shell, with drive wheels" width="1000" height="820" loading="lazy" decoding="async">
         </div>
@@ -552,6 +577,7 @@
           <p class="gtile-sub">Multi-controller architecture · treat dispenser</p>
         </div>
       </div>
+
 
     </div>
 
@@ -1049,10 +1075,45 @@ const PROJECTS = {
     live: null,
     page: 'projects/lyra.html',
   },
+  volans: {
+    title: 'VOLANS',
+    subtitle: 'Fly-and-Drive Micro Drone',
+    status: 'Current · CAD design in progress',
+    grad: 'linear-gradient(135deg, #141413 0%, #1b1f2a 55%, #2a3142 100%)',
+    statusColor: '#C8CDB0',
+    desc: 'A Caltech M4-inspired micro drone that flies, lands, and drives on its ring-prop wheels, with an onboard camera. Designed in Fusion 360 and KiCad on a sub-S$100 budget with no soldering, so it can be reproduced with a hobby printer.',
+    specs: [
+      ['Concept', 'Multimodal flight + ground locomotion on ring props'],
+      ['Design', 'Fusion 360 CAD · KiCad electronics'],
+      ['Budget', '< S$100 · no soldering'],
+      ['Status', 'CAD design in progress'],
+    ],
+    tags: ['Fusion 360', 'KiCad', 'Quadrotor', 'Multimodal Robotics', '3D Printing'],
+    github: null,
+    live: null,
+  },
+  physia: {
+    title: 'Rolling Friction vs Pressure',
+    subtitle: 'IB Physics Internal Assessment',
+    status: 'Completed · Experimental',
+    grad: 'linear-gradient(135deg, #141413 0%, #1d2017 55%, #2c3024 100%)',
+    statusColor: '#C8CDB0',
+    desc: 'How does a football\u2019s inflation pressure change its coefficient of rolling friction? A ball rolled down a fixed ramp (a stool and a transparent lid), its pressure set with a digital pump, and its stopping distance measured with a tape. The data follows a reciprocal law, \u03bc = 0.1840/P + 0.0999, with R\u00b2 = 0.98 across 3\u201311 PSI.',
+    specs: [
+      ['Independent variable', 'Inflation pressure, 3\u201311 PSI'],
+      ['Dependent variable', 'Coefficient of rolling friction \u03bc'],
+      ['Method', 'Ramp release \u00b7 stopping distance by tape'],
+      ['Model', '\u03bc = 0.1840/P + 0.0999 (reciprocal fit)'],
+      ['Fit quality', 'R\u00b2 = 0.9798 \u00b7 uncertainty bars on both axes'],
+    ],
+    tags: ['Experimental Design', 'Uncertainty Analysis', 'Curve Fitting', 'Python'],
+    github: null,
+    live: null,
+  },
   riscv: {
     title: 'RISC-V CPU',
     subtitle: 'RV32IM Soft Processor — Verilog',
-    status: 'Built · Verified in Simulation · FPGA-Ready',
+    status: 'Built · Verified · Running on FPGA hardware',
     grad: 'linear-gradient(135deg, #141413 0%, #1a1d16 55%, #282c21 100%)',
     statusColor: '#C8CDB0',
     desc: 'A 32-bit RISC-V (RV32IM) processor written from scratch in Verilog — two microarchitectures on one instruction set: a single-cycle core and a classic 5-stage pipeline with full data forwarding, load-use stalls, and branch flushing. It adds machine-mode traps (Zicsr), memory-mapped I/O, my own two-pass assembler, and a synthesizable SoC for a Tang Nano 9K FPGA. Correctness is proven by differential testing: the same program runs on both cores and must produce byte-for-byte identical register and memory state — which is how I caught a real pipeline write/read timing bug.',
@@ -1095,7 +1156,7 @@ function openModal(key) {
 
   let links = '';
   if (p.page) links += `<a href="${p.page}" style="font-size:14px; font-weight:600; color:#F0EEE6; text-decoration:none; background:#141413; padding:12px 24px; border-radius:12px;">Full case study →</a>`;
-  links += `<a href="${p.github}" target="_blank" rel="noopener noreferrer" style="font-size:14px; font-weight:500; color:#141413; text-decoration:none; background:#E7E3D9; padding:11px 22px; border-radius:980px;">${p.githubLabel}</a>`;
+  if (p.github) links += `<a href="${p.github}" target="_blank" rel="noopener noreferrer" style="font-size:14px; font-weight:500; color:#141413; text-decoration:none; background:#E7E3D9; padding:11px 22px; border-radius:980px;">${p.githubLabel}</a>`;
   if (p.live) links += `<a href="${p.live}" target="_blank" rel="noopener noreferrer" style="font-size:14px; font-weight:500; color:#F0EEE6; text-decoration:none; background:#141413; padding:12px 24px; border-radius:12px;">${p.liveLabel}</a>`;
   document.getElementById('modal-links').innerHTML = links;
 
