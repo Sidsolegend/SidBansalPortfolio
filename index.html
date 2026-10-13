@@ -586,17 +586,6 @@
         </div>
       </div>
 
-      <div class="gtile gtile-paper proj-card-clickable" data-cat="hardware" onclick="openModal('physia')" tabindex="0" role="button" aria-label="Open Rolling Friction vs Pressure project details" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal('physia')}">
-        <div class="gtile-media" style="aspect-ratio:5/4;">
-          <img src="assets/projects/phys-ia-graph.webp" alt="Graph of coefficient of rolling friction against football inflation pressure with a reciprocal fit, R squared 0.98" width="861" height="560" loading="lazy" decoding="async" style="object-fit:contain; object-position:center 28%;">
-        </div>
-        <div class="gtile-cap">
-          <p class="gtile-eyebrow">Physics IA · Experimental</p>
-          <h3 class="gtile-name">Rolling Friction vs Pressure</h3>
-          <p class="gtile-sub">Reciprocal fit · R² = 0.98 · football on a ramp</p>
-        </div>
-      </div>
-
       <div class="gtile gtile-cream proj-card-clickable" data-cat="robotics hardware" onclick="openModal('canis')" tabindex="0" role="button" aria-label="Open CANIS project details" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal('canis')}">
         <div class="gtile-media" style="aspect-ratio:4/3;">
           <img src="assets/projects/canis-cad.webp" alt="CAD render of CANIS — treat-dispenser hopper and electronics deck under a translucent shell, with drive wheels" width="1000" height="820" loading="lazy" decoding="async">
@@ -1139,24 +1128,6 @@ const PROJECTS = {
       ['Status', 'CAD design in progress'],
     ],
     tags: ['Fusion 360', 'KiCad', 'Quadrotor', 'Multimodal Robotics', '3D Printing'],
-    github: null,
-    live: null,
-  },
-  physia: {
-    title: 'Rolling Friction vs Pressure',
-    subtitle: 'IB Physics Internal Assessment',
-    status: 'Completed · Experimental',
-    grad: 'linear-gradient(135deg, #141413 0%, #1d2017 55%, #2c3024 100%)',
-    statusColor: '#C8CDB0',
-    desc: 'How does a football\u2019s inflation pressure change its coefficient of rolling friction? A ball rolled down a fixed ramp (a stool and a transparent lid), its pressure set with a digital pump, and its stopping distance measured with a tape. The data follows a reciprocal law, \u03bc = 0.1840/P + 0.0999, with R\u00b2 = 0.98 across 3\u201311 PSI.',
-    specs: [
-      ['Independent variable', 'Inflation pressure, 3\u201311 PSI'],
-      ['Dependent variable', 'Coefficient of rolling friction \u03bc'],
-      ['Method', 'Ramp release \u00b7 stopping distance by tape'],
-      ['Model', '\u03bc = 0.1840/P + 0.0999 (reciprocal fit)'],
-      ['Fit quality', 'R\u00b2 = 0.9798 \u00b7 uncertainty bars on both axes'],
-    ],
-    tags: ['Experimental Design', 'Uncertainty Analysis', 'Curve Fitting', 'Python'],
     github: null,
     live: null,
   },
