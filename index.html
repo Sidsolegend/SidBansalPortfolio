@@ -531,6 +531,17 @@
         </div>
       </div>
 
+      <div class="gtile gtile-dark proj-card-clickable" data-cat="ml" onclick="openModal('clarity')" tabindex="0" role="button" aria-label="Open Clarity project details" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal('clarity')}">
+        <div class="gtile-media" style="aspect-ratio:8/5;">
+          <img src="assets/projects/clarity.webp" alt="Clarity Chrome extension flagging a high-risk terms of service: data sold or shared, class action waiver, forced arbitration" width="1200" height="750" loading="lazy" decoding="async">
+        </div>
+        <div class="gtile-cap">
+          <p class="gtile-eyebrow">Chrome Web Store · Live</p>
+          <h3 class="gtile-name">Clarity</h3>
+          <p class="gtile-sub">Terms &amp; conditions summarizer · runs fully on-device</p>
+        </div>
+      </div>
+
       <div class="gtile gtile-sage proj-card-clickable" data-cat="ml" onclick="openModal('fire')" tabindex="0" role="button" aria-label="Open FIRE project details" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal('fire')}">
         <div class="gtile-media" style="aspect-ratio:16/10;">
           <img src="assets/projects/fire.webp" alt="The FIRE team — seven students in formal wear standing together on campus" width="1600" height="778" loading="lazy" decoding="async">
@@ -632,9 +643,9 @@
           </a>
           <!-- Web & Apps -->
           <div class="proj-group-label">Web &amp; Apps</div>
-          <a href="https://github.com/Sidsolegend" target="_blank" rel="noopener noreferrer" style="display:flex; justify-content:space-between; align-items:center; padding:16px 28px; border-bottom:1px solid #E2DFD5; transition:background 0.15s; text-decoration:none;" style-hover="background:rgba(110,115,85,0.06)">
-            <span style="font-size:15px; font-weight:500; color:#141413;">Clarity — T&amp;C Summarizer (Chrome Extension)</span>
-            <span style="font-size:13px; color:#5F5E57; white-space:nowrap;">JavaScript · TextRank · GitHub ↗</span>
+          <a href="https://chromewebstore.google.com/detail/clarity-%E2%80%94-terms-condition/cdjkknlddlpebcbkkdlgfjgafpaneeaa" target="_blank" rel="noopener noreferrer" style="display:flex; justify-content:space-between; align-items:center; padding:16px 28px; border-bottom:1px solid #E2DFD5; transition:background 0.15s; text-decoration:none;" style-hover="background:rgba(110,115,85,0.06)">
+            <span style="font-size:15px; font-weight:500; color:#141413;">Clarity — T&amp;C Summarizer (Chrome Extension, published)</span>
+            <span style="font-size:13px; color:#5F5E57; white-space:nowrap;">Chrome Web Store · Live ↗</span>
           </a>
           <a href="https://github.com/Sidsolegend" target="_blank" rel="noopener noreferrer" style="display:flex; justify-content:space-between; align-items:center; padding:16px 28px; transition:background 0.15s; text-decoration:none;" style-hover="background:rgba(110,115,85,0.06)">
             <span style="font-size:15px; font-weight:500; color:#141413;">Seniors' Health App (HealthSync) — school hackathon with DBS Singapore, top 10 of 500</span>
@@ -1093,6 +1104,26 @@ const PROJECTS = {
     githubLabel: 'GitHub (Private)',
     live: null,
     page: 'projects/lyra.html',
+  },
+  clarity: {
+    title: 'Clarity',
+    subtitle: 'Terms & Conditions Summarizer \u2014 Chrome Extension',
+    status: 'Live on the Chrome Web Store',
+    grad: 'linear-gradient(135deg, #141413 0%, #1b1d2e 55%, #2a2d4a 100%)',
+    statusColor: '#C8CDB0',
+    desc: 'A Manifest V3 Chrome extension that turns terms of service and privacy policies into a short plain-language briefing and flags the clauses that change your rights. Everything runs on-device: no account, no API key, no server. Summaries are extractive (TF-IDF + TextRank + MMR), so every line is a verbatim sentence from the page, never a paraphrase that could invert a clause. 13 clause families are detected with negation handling, and a 0\u2013100 risk score blends breadth with intensity. PDFs work too, parsed locally with pdf.js.',
+    specs: [
+      ['Summarizer', 'TF-IDF sentence graph \u00b7 TextRank \u00b7 MMR \u2014 verbatim, never generated'],
+      ['Risk flags', '13 clause families \u00b7 negation-aware \u00b7 0\u2013100 risk score'],
+      ['Also shows', 'Readability (Flesch, Fog) \u00b7 jargon glossary'],
+      ['Privacy', '100% on-device \u00b7 no servers or API keys'],
+      ['Testing', '122 automated checks (NLP, runtime, package validation)'],
+      ['Status', 'Published on the Chrome Web Store'],
+    ],
+    tags: ['JavaScript', 'Chrome MV3', 'NLP', 'TextRank', 'pdf.js', 'Privacy'],
+    github: null,
+    live: 'https://chromewebstore.google.com/detail/clarity-%E2%80%94-terms-condition/cdjkknlddlpebcbkkdlgfjgafpaneeaa',
+    liveLabel: 'Chrome Web Store \u2192',
   },
   volans: {
     title: 'VOLANS',
