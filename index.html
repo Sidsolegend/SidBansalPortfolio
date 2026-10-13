@@ -135,11 +135,21 @@
     .gtile:hover .gtile-sub, .gtile:focus-visible .gtile-sub { max-height:48px; opacity:1; }
     /* LYNX — sage text tile (no photo, unbuilt) */
     .hero-reel { max-width:1120px; margin:calc(-1 * clamp(40px,6vw,80px)) auto 0; padding:0 40px clamp(48px,7vw,96px); display:grid; grid-template-columns:1fr 1.5fr 1fr; gap:16px; background:#F0EEE6; }
-    .hero-reel figure { position:relative; margin:0; border-radius:22px; overflow:hidden; aspect-ratio:4/5; background:#141413; }
+    .hero-reel figure { position:relative; margin:0; border-radius:22px; overflow:hidden; aspect-ratio:3/4; background:#141413; }
     .hero-reel figure:nth-child(2) { aspect-ratio:auto; }
     .hero-reel img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
     .hero-reel figcaption { position:absolute; left:16px; bottom:14px; font-size:10px; font-weight:600; letter-spacing:1.6px; text-transform:uppercase; color:#F0EEE6; text-shadow:0 1px 8px rgba(0,0,0,.5); }
     @media (max-width:768px){ .hero-reel { grid-template-columns:1fr 1fr; padding:0 24px 56px; } .hero-reel figure:nth-child(2) { grid-column:1/-1; order:-1; aspect-ratio:16/10; } }
+    .stats { background:#141413; color:#F0EEE6; padding:clamp(44px,6vw,72px) 40px; }
+    .stats-in { max-width:1120px; margin:0 auto; display:grid; grid-template-columns:repeat(4,1fr); gap:24px 32px; }
+    .stat { border-left:1px solid rgba(240,238,230,.18); padding-left:20px; }
+    .stat-n { font-family:'General Sans','Inter',system-ui,sans-serif; font-size:clamp(2.2rem,4.4vw,3.6rem); font-weight:700; letter-spacing:-0.04em; line-height:1; color:#C8CDB0; }
+    .stat-l { font-size:13px; line-height:1.5; color:rgba(240,238,230,.72); margin-top:10px; max-width:200px; }
+    .hero-reel figure { transition:transform .5s cubic-bezier(.16,1,.3,1); }
+    .hero-reel figure:hover { transform:translateY(-6px); }
+    .hero-reel figure:nth-child(1) { margin-top:36px; }
+    .hero-reel figure:nth-child(3) { margin-top:72px; }
+    @media (max-width:768px){ .stats-in { grid-template-columns:1fr 1fr; } .hero-reel figure:nth-child(n) { margin-top:0; } }
     .gtile-dark .gtile-media { background:#141413; }
     .gtile-paper .gtile-media { background:#fff; }
     .gtile-cream .gtile-media { background:#FFFFE8; }
@@ -312,9 +322,18 @@
 
 <div class="hero-reel" aria-label="Selected builds">
   <figure><img src="assets/projects/lyra-worn.webp" alt="LYRA gesture wearable on the wrist" width="415" height="900" decoding="async"><figcaption>LYRA · wearable</figcaption></figure>
-  <figure><img src="assets/projects/canis.webp" alt="CANIS robot chassis with Raspberry Pi 5" width="1600" height="1200" decoding="async"><figcaption>CANIS · robotics</figcaption></figure>
+  <figure><img src="assets/projects/canis-final.webp" alt="The finished CANIS robot with ESP32 and ultrasonic sensors" width="1400" height="1135" decoding="async"><figcaption>CANIS · robotics</figcaption></figure>
   <figure><img src="assets/projects/volans-cad.webp" alt="VOLANS micro drone CAD sketch" width="590" height="680" decoding="async"><figcaption>VOLANS · in design</figcaption></figure>
 </div>
+
+<section class="stats" aria-label="At a glance">
+  <div class="stats-in">
+    <div class="stat"><div class="stat-n">41/42</div><p class="stat-l">Predicted IB Diploma score</p></div>
+    <div class="stat"><div class="stat-n">~1,000</div><p class="stat-l">Students reached by FIRE, a platform I built and shipped</p></div>
+    <div class="stat"><div class="stat-n">79%</div><p class="stat-l">LYRA gesture accuracy on people it was never trained on</p></div>
+    <div class="stat"><div class="stat-n">2 cores</div><p class="stat-l">RISC-V CPUs from scratch, running on a real FPGA</p></div>
+  </div>
+</section>
 
 <!-- ═══ BIO ═══ -->
 <section style="padding:clamp(64px,9vw,120px) 32px; background:#F0EEE6;">
@@ -345,7 +364,7 @@
         <div style="text-align:right;">
           <span style="font-size:13px; font-weight:600; color:#5F5E57;">2025 – 2027</span>
           <div style="margin-top:8px;">
-            <span style="font-size:15px; font-weight:700; color:#141413;">44 / 45</span>
+            <span style="font-size:15px; font-weight:700; color:#141413;">41 / 42</span>
             <span style="font-size:13px; color:#5F5E57; margin-left:6px;">Predicted · Year 1: 40 / 42</span>
           </div>
         </div>
@@ -536,7 +555,7 @@
 
       <div class="gtile gtile-greige proj-card-clickable" data-cat="robotics ml" onclick="openModal('canis')" tabindex="0" role="button" aria-label="Open CANIS project details" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal('canis')}">
         <div class="gtile-media" style="aspect-ratio:1/1;">
-          <img src="assets/projects/canis.webp" alt="CANIS chassis prototype — a Raspberry Pi 5 in a black case mounted on a yellow and black metal chassis with drive wheels" width="1600" height="1200" loading="lazy" decoding="async">
+          <img src="assets/projects/canis-final.webp" alt="The finished CANIS robot — ESP32, ultrasonic sensors and wiring mounted on a yellow chassis" width="1600" height="1200" loading="lazy" decoding="async">
         </div>
         <div class="gtile-cap">
           <p class="gtile-eyebrow">Robotics · Computer Vision</p>
